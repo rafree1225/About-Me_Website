@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>重點專案介紹 ｜ 許雅婷 Christine Hsu</title>
+<style>
+/* ============================================================
+   許雅婷｜AI 應用規劃師 面試自介網站
+   Design tokens — teal/blue-green, editorial-meets-technical
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Noto+Serif+TC:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root{
+  /* color */
+  --bg: #FBFDFF;
+  --bg-soft: #F3FAF9;
+  --bg-deep: #0B3B37;
+  --bg-deep-2: #0F4842;
+  --ink: #17356B;          /* headings / titles — navy blue */
+  --ink-soft: #1C6E68;     /* body copy — blue-green */
+  --ink-faint: #5C8480;    /* meta / faint text — muted teal */
+  --accent-red: #E15241;   /* key highlights / "重點" */
+  --accent-red-deep: #C43F30;
+  --accent-red-tint: #FCEAE7;
+  --teal-900: #0B4F4A;
+  --teal-700: #0F766E;
+  --teal-600: #14867B;
+  --teal-500: #1AA69A;
+  --teal-300: #7ED0C4;
+  --teal-200: #B8E5DD;
+  --teal-100: #DCF2EE;
+  --teal-050: #F0FAF8;
+  --line: #DCEAE6;
+  --line-soft: #EAF3F1;
+  --paper: #FCFEFE;
+  --gold: #C9982F;
+  --shadow-color: 179, 205, 199;
+
+  /* type */
+  --f-display: 'Fraunces', 'Noto Serif TC', serif;
+  --f-body: 'Inter', 'Noto Sans TC', -apple-system, sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --maxw: 1120px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; background: var(--bg); }
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+/* ---------- Decorative background (fixed, whole-site) ---------- */
+.bg-deco{
+  position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none;
+}
+.bg-deco-svg{ width: 100%; height: 100%; display: block; }
+.bg-deco::after{
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 55%, rgba(255,255,255,0.35) 100%);
+}
+h1,h2,h3,h4{ margin: 0; font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01em; }
+p{ margin: 0; }
+ul{ margin: 0; padding: 0; list-style: none; }
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; display: block; }
+button{ font-family: inherit; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+.wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px){ .wrap{ padding: 0 20px; } }
+
+.eyebrow{
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-700);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before{
+  content: '';
+  width: 22px; height: 1px;
+  background: var(--teal-500);
+  display: inline-block;
+}
+
+section{ position: relative; }
+
+/* ---------- Nav ---------- */
+.site-nav{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.site-nav.scrolled{
+  border-bottom-color: var(--line);
+  box-shadow: 0 8px 24px -18px rgba(11,79,74,0.35);
+}
+.site-nav .wrap{
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.brand{ display: flex; align-items: center; gap: 10px; }
+.brand-mark{
+  width: 32px; height: 32px; border: 1.4px solid var(--teal-700); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-mono); font-size: 12px; font-weight: 600; color: var(--teal-700);
+  flex-shrink: 0;
+}
+.brand-name{ font-family: var(--f-display); font-size: 17px; font-weight: 600; color: var(--ink); }
+.brand-name span{ color: var(--teal-700); }
+
+.nav-links{ display: flex; align-items: center; gap: 2px; }
+.nav-links a{
+  font-size: 14px; padding: 9px 14px; border-radius: 100px; color: var(--ink-soft);
+  transition: color .2s ease, background .2s ease;
+  white-space: nowrap;
+}
+.nav-links a:hover{ color: var(--teal-700); background: var(--teal-050); }
+.nav-links a.active{ color: var(--teal-700); background: var(--teal-100); font-weight: 500; }
+.nav-links a.nav-cta{
+  color: var(--paper); background: var(--teal-700); font-weight: 500; margin-left: 6px;
+}
+.nav-links a.nav-cta:hover{ background: var(--teal-900); color: var(--paper); }
+
+.nav-toggle{
+  display: none; width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--paper); align-items: center; justify-content: center; flex-direction: column; gap: 4px;
+}
+.nav-toggle span{ width: 18px; height: 1.4px; background: var(--ink); display: block; }
+
+@media (max-width: 920px){
+  .nav-links{
+    position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+    background: var(--paper); flex-direction: column; align-items: stretch; gap: 2px;
+    padding: 18px 24px; transform: translateX(100%); transition: transform .32s ease;
+    overflow-y: auto;
+  }
+  .nav-links.open{ transform: translateX(0); }
+  .nav-links a{ padding: 14px 6px; border-bottom: 1px solid var(--line-soft); border-radius: 0; }
+  .nav-links a.nav-cta{ border-radius: 10px; text-align: center; margin-top: 10px; border-bottom: none; }
+  .nav-toggle{ display: flex; }
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 24px; border-radius: 100px; font-size: 14.5px; font-weight: 500;
+  border: 1px solid transparent; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn-primary{ background: var(--teal-700); color: #fff; }
+.btn-primary:hover{ background: var(--teal-900); transform: translateY(-1px); box-shadow: 0 12px 24px -10px rgba(11,79,74,0.45); }
+.btn-ghost{ border-color: var(--line); color: var(--ink); background: var(--paper); }
+.btn-ghost:hover{ border-color: var(--teal-500); color: var(--teal-700); transform: translateY(-1px); }
+.btn svg{ width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ---------- Path motif (signature element) ---------- */
+.path-track{ display: flex; align-items: center; }
+.path-node{
+  font-family: var(--f-mono); font-size: 12.5px; color: var(--teal-900);
+  background: var(--teal-050); border: 1px solid var(--teal-200);
+  padding: 7px 13px; border-radius: 100px; white-space: nowrap;
+}
+.path-line{
+  flex: 1; height: 1px; min-width: 18px; margin: 0 2px;
+  background-image: linear-gradient(to right, var(--teal-300) 55%, transparent 0%);
+  background-size: 7px 1px; background-repeat: repeat-x;
+  position: relative;
+}
+.path-line::after{
+  content: ''; position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: var(--teal-500);
+}
+
+/* ---------- reveal on scroll ---------- */
+.reveal{ opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity: 1; transform: translateY(0); }
+
+/* ---------- Hero ---------- */
+.hero{ padding: 150px 0 96px; overflow: hidden; }
+.hero-grid{ display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+.hero-name{ font-size: clamp(40px, 5.6vw, 66px); line-height: 1.06; margin: 18px 0 6px; color: var(--ink); text-shadow: 0 0 26px rgba(255,255,255,0.75), 0 0 10px rgba(255,255,255,0.65); }
+.hero-name .zh{ display: block; }
+.hero-name .en{
+  display: block; font-family: var(--f-mono); font-weight: 500; font-size: 0.34em;
+  letter-spacing: 0.05em; color: var(--accent-red); margin-top: 12px;
+}
+.hero-tagline{
+  font-family: var(--f-display); font-style: italic; font-weight: 500;
+  font-size: clamp(18px, 2vw, 22px); color: var(--teal-900); margin: 20px 0 20px; line-height: 1.55;
+  text-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+.hero-desc{ font-size: 15.5px; color: var(--ink-soft); max-width: 480px; margin-bottom: 30px; }
+.hero-contact{ display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 34px; }
+.hero-contact a, .hero-contact span{
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 13.5px; color: var(--ink-soft);
+}
+.hero-contact svg{ width: 15px; height: 15px; color: var(--teal-600); flex-shrink: 0; }
+.hero-actions{ display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+.hero-path{ padding-top: 26px; border-top: 1px solid var(--line); }
+.hero-path-label{ font-family: var(--f-mono); font-size: 11.5px; color: var(--ink-faint); letter-spacing: .08em; margin-bottom: 12px; display: block; }
+
+.hero-photo-wrap{ position: relative; }
+.hero-photo-frame{
+  position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/4.6;
+  background: var(--teal-100);
+  box-shadow: 0 30px 60px -30px rgba(11,79,74,0.5);
+}
+.hero-photo-frame img{ width: 100%; height: 100%; object-fit: cover; }
+.hero-photo-ring{
+  position: absolute; inset: -14px; border: 1px solid var(--teal-300); border-radius: 30px;
+  pointer-events: none;
+}
+.hero-photo-tag{
+  position: absolute; bottom: -16px; left: -16px; background: var(--paper);
+  border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px;
+  box-shadow: 0 20px 40px -22px rgba(11,79,74,0.4); max-width: 220px;
+}
+.hero-photo-tag .t1{ font-family: var(--f-mono); font-size: 11px; color: var(--accent-red); letter-spacing: .06em; font-weight: 600; }
+.hero-photo-tag .t2{ font-size: 13px; color: var(--ink-soft); margin-top: 3px; line-height: 1.5; }
+
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-photo-wrap{ max-width: 320px; margin: 0 auto; order: -1; }
+  .hero{ padding-top: 120px; }
+}
+
+/* ---------- Section heading ---------- */
+.sec-head{ margin-bottom: 48px; max-width: 640px; }
+.sec-title{ font-size: clamp(28px, 3.4vw, 38px); margin-top: 14px; color: var(--ink); }
+.sec-sub{ color: var(--ink-soft); font-size: 15.5px; margin-top: 14px; }
+.section-pad{ padding: 96px 0; position: relative; }
+.bg-soft{ background: rgba(243,250,249,0.82); backdrop-filter: blur(2px); }
+.divider{ height: 1px; background: var(--line); border: none; margin: 0; }
+
+/* ---------- inline red highlight for key facts / achievements ---------- */
+.mark{ color: var(--accent-red); font-weight: 700; }
+
+/* ---------- About / traits ---------- */
+.about-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.about-role{
+  border-left: 2px solid var(--teal-200); padding-left: 18px; margin-bottom: 22px;
+}
+.about-role:last-child{ margin-bottom: 0; }
+.about-role h4{ font-family: var(--f-body); font-weight: 600; font-size: 15px; color: var(--teal-900); }
+.about-role p{ font-size: 14.5px; color: var(--ink-soft); margin-top: 5px; }
+
+.traits-cloud{ display: flex; flex-wrap: wrap; gap: 10px; }
+.trait-pill{
+  font-size: 13.5px; padding: 9px 16px; border-radius: 100px; border: 1px solid var(--line);
+  color: var(--ink-soft); background: var(--paper);
+  transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+}
+.trait-pill:hover{ transform: translateY(-2px); border-color: var(--teal-500); color: var(--teal-800, var(--teal-900)); background: var(--teal-050); }
+
+@media (max-width: 800px){ .about-grid{ grid-template-columns: 1fr; gap: 36px; } }
+
+/* ---------- Timeline ---------- */
+.timeline{ position: relative; padding-left: 34px; }
+.timeline::before{
+  content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 1px;
+  background: linear-gradient(to bottom, var(--teal-300), var(--line) 92%);
+}
+.tl-item{ position: relative; padding-bottom: 44px; }
+.tl-item:last-child{ padding-bottom: 0; }
+.tl-dot{
+  position: absolute; left: -34px; top: 4px; width: 11px; height: 11px; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--teal-600);
+}
+.tl-item.current .tl-dot{ background: var(--teal-600); box-shadow: 0 0 0 4px var(--teal-100); }
+.tl-card{
+  background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px;
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+.tl-card:hover{ box-shadow: 0 24px 44px -32px rgba(11,79,74,0.45); border-color: var(--teal-200); }
+.tl-top{ display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 20px; }
+.tl-period{ font-family: var(--f-mono); font-size: 12.5px; color: var(--teal-700); letter-spacing: .03em; }
+.tl-role{ font-size: 18px; font-weight: 600; font-family: var(--f-body); color: var(--ink); margin-top: 6px; }
+.tl-company{ font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+.tl-badge{
+  font-family: var(--f-mono); font-size: 11px; color: var(--accent-red); background: var(--accent-red-tint);
+  padding: 4px 10px; border-radius: 100px; white-space: nowrap; height: fit-content; font-weight: 600;
+}
+.tl-toggle{
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+  color: var(--teal-700); font-weight: 500; background: none; border: none; padding: 0;
+}
+.tl-toggle svg{ width: 13px; height: 13px; transition: transform .25s ease; }
+.tl-item.expanded .tl-toggle svg{ transform: rotate(180deg); }
+.tl-body{
+  max-height: 0; overflow: hidden; transition: max-height .4s ease, margin-top .4s ease;
+}
+.tl-item.expanded .tl-body{ margin-top: 16px; }
+.tl-body ul{ padding-top: 4px; }
+.tl-body li{
+  font-size: 14.5px; color: var(--ink-soft); padding: 7px 0 7px 20px; position: relative; line-height: 1.65;
+  border-top: 1px solid var(--line-soft);
+}
+.tl-body li:first-child{ border-top: none; }
+.tl-body li::before{
+  content: ''; position: absolute; left: 3px; top: 16px; width: 5px; height: 5px; border-radius: 50%; background: var(--teal-400, var(--teal-500));
+}
+.tl-more{
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+  font-family: var(--f-mono); color: var(--teal-700); border-bottom: 1px solid var(--teal-300); padding-bottom: 1px;
+}
+.tl-more:hover{ color: var(--teal-900); border-color: var(--teal-900); }
+
+/* ---------- Education ---------- */
+.edu-card{
+  display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 32px 34px;
+}
+.edu-mark{
+  width: 56px; height: 56px; border-radius: 14px; background: var(--teal-700); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-family: var(--f-display); font-size: 20px; font-weight: 600;
+  flex-shrink: 0;
+}
+.edu-school{ font-size: 20px; font-weight: 600; color: var(--ink); }
+.edu-dept{ font-size: 14.5px; color: var(--ink-soft); margin-top: 4px; }
+.edu-notes{ font-size: 13px; color: var(--ink-faint); margin-top: 10px; }
+.edu-gpa{ text-align: right; }
+.edu-gpa .num{ font-family: var(--f-mono); font-size: 26px; color: var(--teal-700); font-weight: 600; }
+.edu-gpa .lbl{ font-size: 11.5px; color: var(--ink-faint); font-family: var(--f-mono); margin-top: 2px; }
+@media (max-width: 640px){
+  .edu-card{ grid-template-columns: auto 1fr; }
+  .edu-gpa{ grid-column: 1 / -1; text-align: left; padding-top: 12px; border-top: 1px solid var(--line-soft); }
+}
+
+/* ---------- Skills ---------- */
+.skills-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skill-card{ background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.skill-card h4{ font-family: var(--f-body); font-size: 14.5px; font-weight: 600; color: var(--teal-900); margin-bottom: 14px; display: flex; align-items: center; gap: 9px;}
+.skill-card h4::before{ content: ''; width: 7px; height: 7px; border-radius: 2px; background: var(--teal-500); flex-shrink: 0; }
+.skill-tags{ display: flex; flex-wrap: wrap; gap: 7px; }
+.skill-tag{
+  font-family: var(--f-mono); font-size: 12px; padding: 5px 10px; border-radius: 6px;
+  background: var(--teal-050); color: var(--teal-900); border: 1px solid var(--teal-100);
+}
+@media (max-width: 900px){ .skills-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .skills-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- Autobiography accordion ---------- */
+.acc{ border-top: 1px solid var(--line); }
+.acc-item{ border-bottom: 1px solid var(--line); }
+.acc-head{
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 24px 4px; background: none; border: none; text-align: left;
+}
+.acc-head-left{ display: flex; align-items: baseline; gap: 16px; }
+.acc-num{ font-family: var(--f-mono); font-size: 13px; color: var(--teal-500); }
+.acc-title{ font-size: 17px; font-weight: 600; font-family: var(--f-body); color: var(--ink); }
+.acc-icon{
+  width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+.acc-icon svg{ width: 11px; height: 11px; color: var(--teal-700); }
+.acc-item.open .acc-icon{ transform: rotate(45deg); background: var(--teal-700); border-color: var(--teal-700); }
+.acc-item.open .acc-icon svg{ color: #fff; }
+.acc-panel{ max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+.acc-panel-in{ padding: 0 4px 28px; max-width: 760px; }
+.acc-panel-in p{ font-size: 14.8px; color: var(--ink-soft); line-height: 1.85; }
+.acc-panel-in p + p{ margin-top: 14px; }
+.acc-panel-in strong{ color: var(--ink); font-weight: 600; }
+
+/* ---------- Achievements ---------- */
+.ach-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ach-card{
+  background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden;
+}
+.ach-card.highlight{
+  background: linear-gradient(160deg, var(--bg-deep) 0%, #123E52 100%); border-color: var(--bg-deep);
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(201,152,47,0.35) 0%, transparent 3%),
+    radial-gradient(circle at 78% 65%, rgba(201,152,47,0.3) 0%, transparent 2.5%),
+    radial-gradient(circle at 55% 15%, rgba(201,152,47,0.28) 0%, transparent 2%),
+    radial-gradient(circle at 30% 80%, rgba(201,152,47,0.25) 0%, transparent 2%),
+    linear-gradient(160deg, var(--bg-deep) 0%, #123E52 100%);
+}
+.ach-card.highlight .ach-title, .ach-card.highlight .ach-desc{ color: #fff; }
+.ach-card.highlight .ach-desc{ color: var(--teal-100); }
+.ach-icon{
+  width: 38px; height: 38px; border-radius: 10px; background: var(--teal-100); color: var(--teal-700);
+  display: flex; align-items: center; justify-content: center;
+}
+.ach-card.highlight .ach-icon{ background: rgba(255,255,255,0.14); color: var(--gold); }
+.ach-icon svg{ width: 18px; height: 18px; }
+.ach-title{ font-size: 15px; font-weight: 600; color: var(--ink); }
+.ach-desc{ font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
+.ach-tag{ font-family: var(--f-mono); font-size: 10.5px; color: var(--accent-red); letter-spacing: .04em; font-weight: 600; }
+.ach-card.highlight .ach-tag{ color: var(--teal-200); }
+@media (max-width: 900px){ .ach-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .ach-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- Projects CTA banner ---------- */
+.cta-banner{
+  background: var(--bg-deep); border-radius: 28px; padding: 64px 56px; color: #fff;
+  position: relative; overflow: hidden;
+}
+.cta-banner::before{
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(126,208,196,0.16), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(126,208,196,0.12), transparent 45%),
+    radial-gradient(circle at 8% 15%, var(--gold) 0%, transparent 1.4%),
+    radial-gradient(circle at 22% 60%, var(--gold) 0%, transparent 1%),
+    radial-gradient(circle at 40% 25%, var(--gold) 0%, transparent 1.2%),
+    radial-gradient(circle at 65% 80%, var(--gold) 0%, transparent 1%),
+    radial-gradient(circle at 88% 30%, var(--gold) 0%, transparent 1.4%),
+    radial-gradient(circle at 92% 70%, var(--gold) 0%, transparent 1%),
+    radial-gradient(circle at 55% 55%, var(--gold) 0%, transparent 0.8%),
+    radial-gradient(circle at 30% 85%, var(--gold) 0%, transparent 1%);
+  opacity: 0.7;
+}
+.cta-inner{ position: relative; display: grid; grid-template-columns: 1.3fr auto; gap: 40px; align-items: center; }
+.cta-banner .eyebrow{ color: var(--teal-300); }
+.cta-banner .eyebrow::before{ background: var(--teal-300); }
+.cta-title{ font-size: clamp(24px, 3vw, 32px); color: #fff; margin-top: 14px; line-height: 1.4; }
+.cta-desc{ font-size: 14.5px; color: var(--teal-100); margin-top: 14px; max-width: 480px; line-height: 1.75; }
+.cta-companies{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.cta-companies span{
+  font-family: var(--f-mono); font-size: 11.5px; color: var(--teal-100); border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 12px; border-radius: 100px;
+}
+.cta-banner .btn-primary{ background: #fff; color: var(--teal-900); }
+.cta-banner .btn-primary:hover{ background: var(--teal-100); }
+@media (max-width: 760px){ .cta-inner{ grid-template-columns: 1fr; } .cta-banner{ padding: 44px 28px; } }
+
+/* ---------- Footer ---------- */
+.site-footer{
+  background: var(--bg-deep); color: var(--teal-100); padding: 64px 0 32px; position: relative; overflow: hidden;
+}
+.site-footer::before{
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.55;
+  background-image:
+    radial-gradient(circle at 6% 30%, var(--gold) 0%, transparent 1.2%),
+    radial-gradient(circle at 18% 70%, var(--gold) 0%, transparent 0.9%),
+    radial-gradient(circle at 35% 20%, var(--gold) 0%, transparent 1%),
+    radial-gradient(circle at 60% 60%, var(--gold) 0%, transparent 1.1%),
+    radial-gradient(circle at 82% 25%, var(--gold) 0%, transparent 0.9%),
+    radial-gradient(circle at 95% 75%, var(--gold) 0%, transparent 1.2%);
+}
+.site-footer .wrap{ position: relative; }
+.footer-grid{ display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+.footer-name{ font-family: var(--f-display); font-size: 24px; color: #fff; }
+.footer-tag{ font-size: 13.5px; color: var(--teal-300); margin-top: 8px; max-width: 300px; }
+.footer-contact{ display: flex; flex-direction: column; gap: 10px; }
+.footer-contact a{ display: flex; align-items: center; gap: 9px; font-family: var(--f-mono); font-size: 13.5px; color: var(--teal-100); }
+.footer-contact svg{ width: 14px; height: 14px; }
+.footer-bottom{
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 12.5px; color: var(--teal-300); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+
+/* ============================================================
+   Projects page specific
+   ============================================================ */
+.proj-hero{ padding: 150px 0 56px; }
+.back-link{
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.back-link:hover{ color: var(--teal-700); }
+.back-link svg{ width: 14px; height: 14px; }
+
+.filter-bar{
+  position: sticky; top: 68px; z-index: 40; background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); padding: 16px 0;
+}
+.filter-scroll{ display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.filter-scroll::-webkit-scrollbar{ display: none; }
+.filter-pill{
+  font-family: var(--f-mono); font-size: 12.5px; padding: 9px 16px; border-radius: 100px;
+  border: 1px solid var(--line); color: var(--ink-soft); white-space: nowrap; flex-shrink: 0;
+  transition: all .2s ease; background: var(--paper);
+}
+.filter-pill:hover{ border-color: var(--teal-400, var(--teal-500)); color: var(--teal-700); }
+.filter-pill.active{ background: var(--teal-700); border-color: var(--teal-700); color: #fff; }
+
+.company-block{ padding: 72px 0; scroll-margin-top: 140px; }
+.company-block + .company-block{ border-top: 1px solid var(--line); }
+.company-head{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; }
+.company-index{ font-family: var(--f-mono); font-size: 13px; color: var(--teal-500); }
+.company-name{ font-size: clamp(22px, 2.6vw, 28px); margin-top: 8px; color: var(--ink); }
+.company-role{ font-size: 14.5px; color: var(--teal-700); margin-top: 6px; font-weight: 500; }
+.company-period{ font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-faint); margin-top: 4px; }
+.company-summary{ font-size: 14px; color: var(--ink-soft); max-width: 340px; line-height: 1.75; }
+
+.proj-grid{ display: grid; grid-template-columns: 1fr; gap: 22px; }
+.proj-card{
+  background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 30px 32px;
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+.proj-card:hover{ box-shadow: 0 28px 50px -34px rgba(11,79,74,0.4); border-color: var(--teal-200); }
+.proj-top{ display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.proj-title{ font-size: 18.5px; font-weight: 600; font-family: var(--f-body); color: var(--ink); }
+.proj-meta{ font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.proj-tech{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.proj-tech span{
+  font-family: var(--f-mono); font-size: 11px; padding: 4px 9px; border-radius: 6px;
+  background: var(--teal-050); color: var(--teal-900); border: 1px solid var(--teal-100);
+}
+.proj-list{ margin-top: 18px; }
+.proj-list li{
+  font-size: 14.5px; color: var(--ink-soft); padding: 8px 0 8px 20px; position: relative; line-height: 1.65;
+  border-top: 1px solid var(--line-soft);
+}
+.proj-list li:first-child{ border-top: none; }
+.proj-list li::before{ content: ''; position: absolute; left: 3px; top: 17px; width: 5px; height: 5px; border-radius: 50%; background: var(--teal-500); }
+
+.detail-toggle{
+  margin-top: 18px; display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500;
+  color: var(--teal-700); background: var(--teal-050); border: 1px solid var(--teal-100); padding: 8px 15px; border-radius: 100px;
+}
+.detail-toggle svg{ width: 12px; height: 12px; transition: transform .25s ease; }
+.proj-card.expanded .detail-toggle svg{ transform: rotate(180deg); }
+.proj-card.expanded .detail-toggle{ background: var(--teal-700); color: #fff; border-color: var(--teal-700); }
+
+.proj-detail{ max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+.proj-detail-in{ margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--line); }
+.detail-label{ font-family: var(--f-mono); font-size: 11.5px; color: var(--teal-700); letter-spacing: .06em; margin-bottom: 16px; display:block; }
+
+/* flow diagram */
+.flow{ display: flex; flex-direction: column; }
+.flow-step{ display: flex; gap: 16px; }
+.flow-rail{ display: flex; flex-direction: column; align-items: center; width: 20px; flex-shrink: 0; }
+.flow-dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--teal-600); flex-shrink: 0; margin-top: 5px; }
+.flow-connector{ width: 1px; flex: 1; background: var(--teal-200); min-height: 22px; }
+.flow-step:last-child .flow-connector{ display: none; }
+.flow-content{ padding-bottom: 22px; }
+.flow-content .num{ font-family: var(--f-mono); font-size: 11px; color: var(--teal-500); }
+.flow-content p{ font-size: 14px; color: var(--ink-soft); margin-top: 3px; line-height: 1.65; max-width: 560px; }
+.flow-content p strong{ color: var(--ink); font-weight: 600; }
+
+/* challenge/approach/result */
+.cas-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cas-card{ background: var(--bg-soft); border-radius: 12px; padding: 18px 20px; }
+.cas-card .lbl{ font-family: var(--f-mono); font-size: 10.5px; color: var(--teal-700); letter-spacing: .06em; }
+.cas-card p{ font-size: 13.5px; color: var(--ink-soft); margin-top: 8px; line-height: 1.6; }
+@media (max-width: 760px){ .cas-grid{ grid-template-columns: 1fr; } }
+
+.role-note{
+  background: var(--teal-050); border: 1px solid var(--teal-100); border-radius: 14px;
+  padding: 18px 22px; font-size: 13.5px; color: var(--teal-900); line-height: 1.7; margin-top: 28px;
+}
+
+.end-cta{ text-align: center; padding: 96px 0 120px; }
+.end-cta h3{ font-size: clamp(22px, 2.8vw, 30px); color: var(--ink); }
+.end-cta p{ color: var(--ink-soft); font-size: 14.5px; margin-top: 12px; }
+.end-cta .btn{ margin-top: 26px; }
+
+</style>
+</head>
+<body>
+<div class="bg-deco"><svg class="bg-deco-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.7,-23.3 L58.0,-13.6 L14.7,79.7 Z" fill="#84C2EC" fill-opacity="0.575"/><path d="M58.0,-13.6 L61.2,53.1 L14.7,79.7 Z" fill="#57A5E0" fill-opacity="0.55"/><path d="M58.0,-13.6 L149.2,8.7 L61.2,53.1 Z" fill="#F2F9FD" fill-opacity="0.54"/><path d="M149.2,8.7 L159.8,62.0 L61.2,53.1 Z" fill="#123E7C" fill-opacity="0.515"/><path d="M149.2,8.7 L225.6,-20.2 L159.8,62.0 Z" fill="#2670BC" fill-opacity="0.505"/><path d="M225.6,-20.2 L187.0,50.2 L159.8,62.0 Z" fill="#2670BC" fill-opacity="0.48"/><path d="M225.6,-20.2 L271.8,-23.0 L187.0,50.2 Z" fill="#B3DDF5" fill-opacity="0.47"/><path d="M271.8,-23.0 L292.3,75.1 L187.0,50.2 Z" fill="#1B57A0" fill-opacity="0.445"/><path d="M271.8,-23.0 L330.9,0.3 L292.3,75.1 Z" fill="#1B57A0" fill-opacity="0.435"/><path d="M330.9,0.3 L359.3,81.3 L292.3,75.1 Z" fill="#3A8AD1" fill-opacity="0.41"/><path d="M330.9,0.3 L390.5,-14.8 L359.3,81.3 Z" fill="#3A8AD1" fill-opacity="0.4"/><path d="M390.5,-14.8 L415.1,93.2 L359.3,81.3 Z" fill="#2670BC" fill-opacity="0.375"/><path d="M390.5,-14.8 L489.4,2.2 L415.1,93.2 Z" fill="#1B57A0" fill-opacity="0.365"/><path d="M489.4,2.2 L476.4,72.5 L415.1,93.2 Z" fill="#DCEEFA" fill-opacity="0.34"/><path d="M489.4,2.2 L537.6,4.4 L476.4,72.5 Z" fill="#3A8AD1" fill-opacity="0.33"/><path d="M537.6,4.4 L567.0,75.8 L476.4,72.5 Z" fill="#B3DDF5" fill-opacity="0.305"/><path d="M537.6,4.4 L634.9,-24.2 L567.0,75.8 Z" fill="#57A5E0" fill-opacity="0.295"/><path d="M634.9,-24.2 L637.4,73.8 L567.0,75.8 Z" fill="#0D2F63" fill-opacity="0.27"/><path d="M14.7,79.7 L61.2,53.1 L9.9,117.7 Z" fill="#F2F9FD" fill-opacity="0.536"/><path d="M61.2,53.1 L55.8,129.7 L9.9,117.7 Z" fill="#B3DDF5" fill-opacity="0.511"/><path d="M61.2,53.1 L159.8,62.0 L55.8,129.7 Z" fill="#F2F9FD" fill-opacity="0.501"/><path d="M159.8,62.0 L117.5,126.9 L55.8,129.7 Z" fill="#DCEEFA" fill-opacity="0.476"/><path d="M159.8,62.0 L187.0,50.2 L117.5,126.9 Z" fill="#B3DDF5" fill-opacity="0.466"/><path d="M187.0,50.2 L187.4,129.1 L117.5,126.9 Z" fill="#1B57A0" fill-opacity="0.441"/><path d="M187.0,50.2 L292.3,75.1 L187.4,129.1 Z" fill="#3A8AD1" fill-opacity="0.431"/><path d="M292.3,75.1 L282.1,133.4 L187.4,129.1 Z" fill="#1B57A0" fill-opacity="0.406"/><path d="M292.3,75.1 L359.3,81.3 L282.1,133.4 Z" fill="#2670BC" fill-opacity="0.396"/><path d="M359.3,81.3 L338.2,125.8 L282.1,133.4 Z" fill="#0D2F63" fill-opacity="0.371"/><path d="M359.3,81.3 L415.1,93.2 L338.2,125.8 Z" fill="#2670BC" fill-opacity="0.361"/><path d="M415.1,93.2 L402.1,161.4 L338.2,125.8 Z" fill="#F2F9FD" fill-opacity="0.336"/><path d="M415.1,93.2 L476.4,72.5 L402.1,161.4 Z" fill="#1B57A0" fill-opacity="0.326"/><path d="M476.4,72.5 L489.4,145.3 L402.1,161.4 Z" fill="#84C2EC" fill-opacity="0.301"/><path d="M476.4,72.5 L567.0,75.8 L489.4,145.3 Z" fill="#3A8AD1" fill-opacity="0.291"/><path d="M567.0,75.8 L535.3,151.2 L489.4,145.3 Z" fill="#3A8AD1" fill-opacity="0.266"/><path d="M567.0,75.8 L637.4,73.8 L535.3,151.2 Z" fill="#F2F9FD" fill-opacity="0.256"/><path d="M637.4,73.8 L603.8,134.1 L535.3,151.2 Z" fill="#F2F9FD" fill-opacity="0.231"/><path d="M9.9,117.7 L55.8,129.7 L23.6,216.9 Z" fill="#57A5E0" fill-opacity="0.496"/><path d="M55.8,129.7 L71.6,219.0 L23.6,216.9 Z" fill="#84C2EC" fill-opacity="0.472"/><path d="M55.8,129.7 L117.5,126.9 L71.6,219.0 Z" fill="#123E7C" fill-opacity="0.461"/><path d="M117.5,126.9 L154.3,223.5 L71.6,219.0 Z" fill="#2670BC" fill-opacity="0.437"/><path d="M117.5,126.9 L187.4,129.1 L154.3,223.5 Z" fill="#F2F9FD" fill-opacity="0.426"/><path d="M187.4,129.1 L193.6,187.1 L154.3,223.5 Z" fill="#57A5E0" fill-opacity="0.402"/><path d="M187.4,129.1 L282.1,133.4 L193.6,187.1 Z" fill="#3A8AD1" fill-opacity="0.391"/><path d="M282.1,133.4 L266.7,198.6 L193.6,187.1 Z" fill="#84C2EC" fill-opacity="0.367"/><path d="M282.1,133.4 L338.2,125.8 L266.7,198.6 Z" fill="#0D2F63" fill-opacity="0.356"/><path d="M338.2,125.8 L330.5,231.7 L266.7,198.6 Z" fill="#57A5E0" fill-opacity="0.332"/><path d="M338.2,125.8 L402.1,161.4 L330.5,231.7 Z" fill="#3A8AD1" fill-opacity="0.321"/><path d="M402.1,161.4 L431.5,200.9 L330.5,231.7 Z" fill="#B3DDF5" fill-opacity="0.297"/><path d="M402.1,161.4 L489.4,145.3 L431.5,200.9 Z" fill="#123E7C" fill-opacity="0.286"/><path d="M489.4,145.3 L489.7,204.9 L431.5,200.9 Z" fill="#F2F9FD" fill-opacity="0.262"/><path d="M489.4,145.3 L535.3,151.2 L489.7,204.9 Z" fill="#123E7C" fill-opacity="0.251"/><path d="M535.3,151.2 L571.1,208.0 L489.7,204.9 Z" fill="#1B57A0" fill-opacity="0.227"/><path d="M535.3,151.2 L603.8,134.1 L571.1,208.0 Z" fill="#57A5E0" fill-opacity="0.216"/><path d="M603.8,134.1 L608.7,197.6 L571.1,208.0 Z" fill="#57A5E0" fill-opacity="0.192"/><path d="M23.6,216.9 L71.6,219.0 L3.0,268.4 Z" fill="#1B57A0" fill-opacity="0.457"/><path d="M71.6,219.0 L73.0,299.5 L3.0,268.4 Z" fill="#123E7C" fill-opacity="0.432"/><path d="M71.6,219.0 L154.3,223.5 L73.0,299.5 Z" fill="#DCEEFA" fill-opacity="0.422"/><path d="M154.3,223.5 L132.9,266.2 L73.0,299.5 Z" fill="#1B57A0" fill-opacity="0.397"/><path d="M154.3,223.5 L193.6,187.1 L132.9,266.2 Z" fill="#57A5E0" fill-opacity="0.387"/><path d="M193.6,187.1 L230.7,280.5 L132.9,266.2 Z" fill="#57A5E0" fill-opacity="0.362"/><path d="M193.6,187.1 L266.7,198.6 L230.7,280.5 Z" fill="#3A8AD1" fill-opacity="0.352"/><path d="M266.7,198.6 L255.8,257.8 L230.7,280.5 Z" fill="#57A5E0" fill-opacity="0.327"/><path d="M266.7,198.6 L330.5,231.7 L255.8,257.8 Z" fill="#3A8AD1" fill-opacity="0.317"/><path d="M330.5,231.7 L325.6,286.2 L255.8,257.8 Z" fill="#DCEEFA" fill-opacity="0.292"/><path d="M330.5,231.7 L431.5,200.9 L325.6,286.2 Z" fill="#1B57A0" fill-opacity="0.282"/><path d="M431.5,200.9 L427.4,276.2 L325.6,286.2 Z" fill="#84C2EC" fill-opacity="0.257"/><path d="M431.5,200.9 L489.7,204.9 L427.4,276.2 Z" fill="#1B57A0" fill-opacity="0.247"/><path d="M489.7,204.9 L461.2,274.2 L427.4,276.2 Z" fill="#2670BC" fill-opacity="0.222"/><path d="M489.7,204.9 L571.1,208.0 L461.2,274.2 Z" fill="#57A5E0" fill-opacity="0.212"/><path d="M571.1,208.0 L575.0,281.4 L461.2,274.2 Z" fill="#2670BC" fill-opacity="0.187"/><path d="M571.1,208.0 L608.7,197.6 L575.0,281.4 Z" fill="#2670BC" fill-opacity="0.177"/><path d="M608.7,197.6 L642.7,297.7 L575.0,281.4 Z" fill="#84C2EC" fill-opacity="0.152"/><path d="M3.0,268.4 L73.0,299.5 L-23.6,360.8 Z" fill="#123E7C" fill-opacity="0.418"/><path d="M73.0,299.5 L77.7,351.8 L-23.6,360.8 Z" fill="#3A8AD1" fill-opacity="0.393"/><path d="M73.0,299.5 L132.9,266.2 L77.7,351.8 Z" fill="#F2F9FD" fill-opacity="0.383"/><path d="M132.9,266.2 L126.5,356.9 L77.7,351.8 Z" fill="#F2F9FD" fill-opacity="0.358"/><path d="M132.9,266.2 L230.7,280.5 L126.5,356.9 Z" fill="#123E7C" fill-opacity="0.348"/><path d="M230.7,280.5 L187.9,346.8 L126.5,356.9 Z" fill="#1B57A0" fill-opacity="0.323"/><path d="M230.7,280.5 L255.8,257.8 L187.9,346.8 Z" fill="#1B57A0" fill-opacity="0.313"/><path d="M255.8,257.8 L273.3,372.2 L187.9,346.8 Z" fill="#DCEEFA" fill-opacity="0.288"/><path d="M255.8,257.8 L325.6,286.2 L273.3,372.2 Z" fill="#B3DDF5" fill-opacity="0.278"/><path d="M325.6,286.2 L362.6,338.4 L273.3,372.2 Z" fill="#B3DDF5" fill-opacity="0.253"/><path d="M325.6,286.2 L427.4,276.2 L362.6,338.4 Z" fill="#2670BC" fill-opacity="0.243"/><path d="M427.4,276.2 L413.4,334.3 L362.6,338.4 Z" fill="#123E7C" fill-opacity="0.218"/><path d="M427.4,276.2 L461.2,274.2 L413.4,334.3 Z" fill="#B3DDF5" fill-opacity="0.208"/><path d="M461.2,274.2 L502.1,368.2 L413.4,334.3 Z" fill="#84C2EC" fill-opacity="0.183"/><path d="M461.2,274.2 L575.0,281.4 L502.1,368.2 Z" fill="#57A5E0" fill-opacity="0.173"/><path d="M575.0,281.4 L541.4,356.8 L502.1,368.2 Z" fill="#F2F9FD" fill-opacity="0.148"/><path d="M575.0,281.4 L642.7,297.7 L541.4,356.8 Z" fill="#57A5E0" fill-opacity="0.138"/><path d="M642.7,297.7 L625.3,333.0 L541.4,356.8 Z" fill="#0D2F63" fill-opacity="0.113"/><path d="M-23.6,360.8 L77.7,351.8 L12.7,421.9 Z" fill="#B3DDF5" fill-opacity="0.378"/><path d="M77.7,351.8 L82.3,421.5 L12.7,421.9 Z" fill="#2670BC" fill-opacity="0.354"/><path d="M77.7,351.8 L126.5,356.9 L82.3,421.5 Z" fill="#57A5E0" fill-opacity="0.343"/><path d="M126.5,356.9 L113.7,411.4 L82.3,421.5 Z" fill="#DCEEFA" fill-opacity="0.319"/><path d="M126.5,356.9 L187.9,346.8 L113.7,411.4 Z" fill="#123E7C" fill-opacity="0.308"/><path d="M187.9,346.8 L183.5,441.0 L113.7,411.4 Z" fill="#123E7C" fill-opacity="0.284"/><path d="M187.9,346.8 L273.3,372.2 L183.5,441.0 Z" fill="#123E7C" fill-opacity="0.273"/><path d="M273.3,372.2 L293.8,436.3 L183.5,441.0 Z" fill="#57A5E0" fill-opacity="0.249"/><path d="M273.3,372.2 L362.6,338.4 L293.8,436.3 Z" fill="#1B57A0" fill-opacity="0.238"/><path d="M362.6,338.4 L335.2,398.3 L293.8,436.3 Z" fill="#57A5E0" fill-opacity="0.214"/><path d="M362.6,338.4 L413.4,334.3 L335.2,398.3 Z" fill="#84C2EC" fill-opacity="0.203"/><path d="M413.4,334.3 L431.6,441.9 L335.2,398.3 Z" fill="#1B57A0" fill-opacity="0.179"/><path d="M413.4,334.3 L502.1,368.2 L431.6,441.9 Z" fill="#57A5E0" fill-opacity="0.168"/><path d="M502.1,368.2 L462.2,419.3 L431.6,441.9 Z" fill="#1B57A0" fill-opacity="0.144"/><path d="M502.1,368.2 L541.4,356.8 L462.2,419.3 Z" fill="#3A8AD1" fill-opacity="0.133"/><path d="M541.4,356.8 L530.3,432.8 L462.2,419.3 Z" fill="#DCEEFA" fill-opacity="0.109"/><path d="M541.4,356.8 L625.3,333.0 L530.3,432.8 Z" fill="#B3DDF5" fill-opacity="0.098"/><path d="M625.3,333.0 L632.8,401.8 L530.3,432.8 Z" fill="#123E7C" fill-opacity="0.074"/><path d="M12.7,421.9 L82.3,421.5 L-1.2,492.4 Z" fill="#3A8AD1" fill-opacity="0.339"/><path d="M82.3,421.5 L57.6,508.2 L-1.2,492.4 Z" fill="#2670BC" fill-opacity="0.314"/><path d="M82.3,421.5 L113.7,411.4 L57.6,508.2 Z" fill="#0D2F63" fill-opacity="0.304"/><path d="M113.7,411.4 L134.1,475.9 L57.6,508.2 Z" fill="#84C2EC" fill-opacity="0.279"/><path d="M113.7,411.4 L183.5,441.0 L134.1,475.9 Z" fill="#57A5E0" fill-opacity="0.269"/><path d="M183.5,441.0 L208.6,501.3 L134.1,475.9 Z" fill="#1B57A0" fill-opacity="0.244"/><path d="M183.5,441.0 L293.8,436.3 L208.6,501.3 Z" fill="#84C2EC" fill-opacity="0.234"/><path d="M293.8,436.3 L261.1,480.8 L208.6,501.3 Z" fill="#57A5E0" fill-opacity="0.209"/><path d="M293.8,436.3 L335.2,398.3 L261.1,480.8 Z" fill="#3A8AD1" fill-opacity="0.199"/><path d="M335.2,398.3 L368.3,497.3 L261.1,480.8 Z" fill="#0D2F63" fill-opacity="0.174"/><path d="M335.2,398.3 L431.6,441.9 L368.3,497.3 Z" fill="#123E7C" fill-opacity="0.164"/><path d="M431.6,441.9 L410.3,490.9 L368.3,497.3 Z" fill="#B3DDF5" fill-opacity="0.139"/><path d="M431.6,441.9 L462.2,419.3 L410.3,490.9 Z" fill="#DCEEFA" fill-opacity="0.129"/><path d="M462.2,419.3 L463.9,476.5 L410.3,490.9 Z" fill="#57A5E0" fill-opacity="0.104"/><path d="M462.2,419.3 L530.3,432.8 L463.9,476.5 Z" fill="#B3DDF5" fill-opacity="0.094"/><path d="M530.3,432.8 L543.3,494.3 L463.9,476.5 Z" fill="#57A5E0" fill-opacity="0.069"/><path d="M530.3,432.8 L632.8,401.8 L543.3,494.3 Z" fill="#123E7C" fill-opacity="0.059"/><path d="M632.8,401.8 L607.0,476.3 L543.3,494.3 Z" fill="#123E7C" fill-opacity="0.034"/><path d="M-1.2,492.4 L57.6,508.2 L-20.7,566.4 Z" fill="#2670BC" fill-opacity="0.3"/><path d="M57.6,508.2 L55.8,579.9 L-20.7,566.4 Z" fill="#DCEEFA" fill-opacity="0.275"/><path d="M57.6,508.2 L134.1,475.9 L55.8,579.9 Z" fill="#B3DDF5" fill-opacity="0.265"/><path d="M134.1,475.9 L155.1,539.0 L55.8,579.9 Z" fill="#B3DDF5" fill-opacity="0.24"/><path d="M134.1,475.9 L208.6,501.3 L155.1,539.0 Z" fill="#DCEEFA" fill-opacity="0.23"/><path d="M208.6,501.3 L194.0,568.3 L155.1,539.0 Z" fill="#1B57A0" fill-opacity="0.205"/><path d="M208.6,501.3 L261.1,480.8 L194.0,568.3 Z" fill="#1B57A0" fill-opacity="0.195"/><path d="M261.1,480.8 L261.8,542.0 L194.0,568.3 Z" fill="#123E7C" fill-opacity="0.17"/><path d="M261.1,480.8 L368.3,497.3 L261.8,542.0 Z" fill="#84C2EC" fill-opacity="0.16"/><path d="M368.3,497.3 L365.4,563.5 L261.8,542.0 Z" fill="#B3DDF5" fill-opacity="0.135"/><path d="M368.3,497.3 L410.3,490.9 L365.4,563.5 Z" fill="#2670BC" fill-opacity="0.125"/><path d="M410.3,490.9 L412.0,573.9 L365.4,563.5 Z" fill="#57A5E0" fill-opacity="0.1"/><path d="M410.3,490.9 L463.9,476.5 L412.0,573.9 Z" fill="#123E7C" fill-opacity="0.09"/><path d="M463.9,476.5 L497.1,544.8 L412.0,573.9 Z" fill="#DCEEFA" fill-opacity="0.065"/><path d="M463.9,476.5 L543.3,494.3 L497.1,544.8 Z" fill="#B3DDF5" fill-opacity="0.055"/><path d="M543.3,494.3 L531.7,556.6 L497.1,544.8 Z" fill="#F2F9FD" fill-opacity="0.03"/><path d="M1456.2,920.5 L1341.0,912.7 L1437.9,812.9 Z" fill="#3A8AD1" fill-opacity="0.473"/><path d="M1341.0,912.7 L1381.1,808.7 L1437.9,812.9 Z" fill="#0D2F63" fill-opacity="0.446"/><path d="M1341.0,912.7 L1282.7,923.1 L1381.1,808.7 Z" fill="#1B57A0" fill-opacity="0.435"/><path d="M1282.7,923.1 L1266.7,806.9 L1381.1,808.7 Z" fill="#B3DDF5" fill-opacity="0.408"/><path d="M1282.7,923.1 L1232.9,919.5 L1266.7,806.9 Z" fill="#3A8AD1" fill-opacity="0.398"/><path d="M1232.9,919.5 L1208.2,842.9 L1266.7,806.9 Z" fill="#B3DDF5" fill-opacity="0.371"/><path d="M1232.9,919.5 L1159.0,887.5 L1208.2,842.9 Z" fill="#57A5E0" fill-opacity="0.36"/><path d="M1159.0,887.5 L1167.1,811.5 L1208.2,842.9 Z" fill="#F2F9FD" fill-opacity="0.333"/><path d="M1159.0,887.5 L1083.5,879.0 L1167.1,811.5 Z" fill="#57A5E0" fill-opacity="0.323"/><path d="M1083.5,879.0 L1075.9,817.9 L1167.1,811.5 Z" fill="#DCEEFA" fill-opacity="0.296"/><path d="M1083.5,879.0 L1013.6,919.2 L1075.9,817.9 Z" fill="#DCEEFA" fill-opacity="0.285"/><path d="M1013.6,919.2 L1019.3,825.3 L1075.9,817.9 Z" fill="#57A5E0" fill-opacity="0.258"/><path d="M1013.6,919.2 L905.6,917.0 L1019.3,825.3 Z" fill="#84C2EC" fill-opacity="0.248"/><path d="M905.6,917.0 L942.8,802.7 L1019.3,825.3 Z" fill="#3A8AD1" fill-opacity="0.221"/><path d="M1437.9,812.9 L1381.1,808.7 L1464.5,729.4 Z" fill="#B3DDF5" fill-opacity="0.429"/><path d="M1381.1,808.7 L1389.8,734.1 L1464.5,729.4 Z" fill="#57A5E0" fill-opacity="0.402"/><path d="M1381.1,808.7 L1266.7,806.9 L1389.8,734.1 Z" fill="#DCEEFA" fill-opacity="0.392"/><path d="M1266.7,806.9 L1271.1,743.2 L1389.8,734.1 Z" fill="#84C2EC" fill-opacity="0.365"/><path d="M1266.7,806.9 L1208.2,842.9 L1271.1,743.2 Z" fill="#3A8AD1" fill-opacity="0.354"/><path d="M1208.2,842.9 L1229.0,736.7 L1271.1,743.2 Z" fill="#1B57A0" fill-opacity="0.327"/><path d="M1208.2,842.9 L1167.1,811.5 L1229.0,736.7 Z" fill="#1B57A0" fill-opacity="0.317"/><path d="M1167.1,811.5 L1148.4,747.3 L1229.0,736.7 Z" fill="#57A5E0" fill-opacity="0.29"/><path d="M1167.1,811.5 L1075.9,817.9 L1148.4,747.3 Z" fill="#84C2EC" fill-opacity="0.279"/><path d="M1075.9,817.9 L1062.6,750.8 L1148.4,747.3 Z" fill="#3A8AD1" fill-opacity="0.252"/><path d="M1075.9,817.9 L1019.3,825.3 L1062.6,750.8 Z" fill="#57A5E0" fill-opacity="0.242"/><path d="M1019.3,825.3 L981.5,757.9 L1062.6,750.8 Z" fill="#2670BC" fill-opacity="0.215"/><path d="M1019.3,825.3 L942.8,802.7 L981.5,757.9 Z" fill="#123E7C" fill-opacity="0.204"/><path d="M942.8,802.7 L894.1,769.5 L981.5,757.9 Z" fill="#2670BC" fill-opacity="0.177"/><path d="M1464.5,729.4 L1389.8,734.1 L1442.0,681.8 Z" fill="#1B57A0" fill-opacity="0.385"/><path d="M1389.8,734.1 L1378.3,679.2 L1442.0,681.8 Z" fill="#2670BC" fill-opacity="0.358"/><path d="M1389.8,734.1 L1271.1,743.2 L1378.3,679.2 Z" fill="#3A8AD1" fill-opacity="0.348"/><path d="M1271.1,743.2 L1284.4,646.9 L1378.3,679.2 Z" fill="#123E7C" fill-opacity="0.321"/><path d="M1271.1,743.2 L1229.0,736.7 L1284.4,646.9 Z" fill="#1B57A0" fill-opacity="0.31"/><path d="M1229.0,736.7 L1225.7,660.9 L1284.4,646.9 Z" fill="#84C2EC" fill-opacity="0.283"/><path d="M1229.0,736.7 L1148.4,747.3 L1225.7,660.9 Z" fill="#84C2EC" fill-opacity="0.273"/><path d="M1148.4,747.3 L1133.2,688.7 L1225.7,660.9 Z" fill="#0D2F63" fill-opacity="0.246"/><path d="M1148.4,747.3 L1062.6,750.8 L1133.2,688.7 Z" fill="#2670BC" fill-opacity="0.235"/><path d="M1062.6,750.8 L1080.0,659.3 L1133.2,688.7 Z" fill="#3A8AD1" fill-opacity="0.208"/><path d="M1062.6,750.8 L981.5,757.9 L1080.0,659.3 Z" fill="#3A8AD1" fill-opacity="0.198"/><path d="M981.5,757.9 L984.4,665.1 L1080.0,659.3 Z" fill="#1B57A0" fill-opacity="0.171"/><path d="M981.5,757.9 L894.1,769.5 L984.4,665.1 Z" fill="#3A8AD1" fill-opacity="0.16"/><path d="M894.1,769.5 L914.9,659.0 L984.4,665.1 Z" fill="#DCEEFA" fill-opacity="0.133"/><path d="M1442.0,681.8 L1378.3,679.2 L1420.6,589.1 Z" fill="#57A5E0" fill-opacity="0.342"/><path d="M1378.3,679.2 L1388.6,602.8 L1420.6,589.1 Z" fill="#84C2EC" fill-opacity="0.315"/><path d="M1378.3,679.2 L1284.4,646.9 L1388.6,602.8 Z" fill="#B3DDF5" fill-opacity="0.304"/><path d="M1284.4,646.9 L1312.4,599.5 L1388.6,602.8 Z" fill="#84C2EC" fill-opacity="0.277"/><path d="M1284.4,646.9 L1225.7,660.9 L1312.4,599.5 Z" fill="#2670BC" fill-opacity="0.267"/><path d="M1225.7,660.9 L1206.8,595.9 L1312.4,599.5 Z" fill="#0D2F63" fill-opacity="0.24"/><path d="M1225.7,660.9 L1133.2,688.7 L1206.8,595.9 Z" fill="#2670BC" fill-opacity="0.229"/><path d="M1133.2,688.7 L1116.9,581.9 L1206.8,595.9 Z" fill="#84C2EC" fill-opacity="0.202"/><path d="M1133.2,688.7 L1080.0,659.3 L1116.9,581.9 Z" fill="#B3DDF5" fill-opacity="0.192"/><path d="M1080.0,659.3 L1064.9,597.6 L1116.9,581.9 Z" fill="#DCEEFA" fill-opacity="0.165"/><path d="M1080.0,659.3 L984.4,665.1 L1064.9,597.6 Z" fill="#3A8AD1" fill-opacity="0.154"/><path d="M984.4,665.1 L1002.3,591.5 L1064.9,597.6 Z" fill="#84C2EC" fill-opacity="0.127"/><path d="M984.4,665.1 L914.9,659.0 L1002.3,591.5 Z" fill="#57A5E0" fill-opacity="0.117"/><path d="M914.9,659.0 L917.0,578.0 L1002.3,591.5 Z" fill="#57A5E0" fill-opacity="0.09"/><path d="M1420.6,589.1 L1388.6,602.8 L1438.6,538.2 Z" fill="#1B57A0" fill-opacity="0.298"/><path d="M1388.6,602.8 L1381.1,498.9 L1438.6,538.2 Z" fill="#1B57A0" fill-opacity="0.271"/><path d="M1388.6,602.8 L1312.4,599.5 L1381.1,498.9 Z" fill="#3A8AD1" fill-opacity="0.26"/><path d="M1312.4,599.5 L1269.8,517.5 L1381.1,498.9 Z" fill="#0D2F63" fill-opacity="0.233"/><path d="M1312.4,599.5 L1206.8,595.9 L1269.8,517.5 Z" fill="#2670BC" fill-opacity="0.223"/><path d="M1206.8,595.9 L1224.1,507.8 L1269.8,517.5 Z" fill="#57A5E0" fill-opacity="0.196"/><path d="M1206.8,595.9 L1116.9,581.9 L1224.1,507.8 Z" fill="#2670BC" fill-opacity="0.185"/><path d="M1116.9,581.9 L1159.4,530.1 L1224.1,507.8 Z" fill="#1B57A0" fill-opacity="0.158"/><path d="M1116.9,581.9 L1064.9,597.6 L1159.4,530.1 Z" fill="#3A8AD1" fill-opacity="0.148"/><path d="M1064.9,597.6 L1077.6,501.9 L1159.4,530.1 Z" fill="#123E7C" fill-opacity="0.121"/><path d="M1064.9,597.6 L1002.3,591.5 L1077.6,501.9 Z" fill="#57A5E0" fill-opacity="0.11"/><path d="M1002.3,591.5 L978.6,491.1 L1077.6,501.9 Z" fill="#0D2F63" fill-opacity="0.083"/><path d="M1002.3,591.5 L917.0,578.0 L978.6,491.1 Z" fill="#2670BC" fill-opacity="0.073"/><path d="M917.0,578.0 L906.7,515.3 L978.6,491.1 Z" fill="#57A5E0" fill-opacity="0.046"/><path d="M1438.6,538.2 L1381.1,498.9 L1458.2,417.1 Z" fill="#0D2F63" fill-opacity="0.254"/><path d="M1381.1,498.9 L1361.3,447.0 L1458.2,417.1 Z" fill="#57A5E0" fill-opacity="0.227"/><path d="M1381.1,498.9 L1269.8,517.5 L1361.3,447.0 Z" fill="#123E7C" fill-opacity="0.217"/><path d="M1269.8,517.5 L1275.5,450.5 L1361.3,447.0 Z" fill="#3A8AD1" fill-opacity="0.19"/><path d="M1269.8,517.5 L1224.1,507.8 L1275.5,450.5 Z" fill="#0D2F63" fill-opacity="0.179"/><path d="M1224.1,507.8 L1216.9,426.3 L1275.5,450.5 Z" fill="#2670BC" fill-opacity="0.152"/><path d="M1224.1,507.8 L1159.4,530.1 L1216.9,426.3 Z" fill="#1B57A0" fill-opacity="0.142"/><path d="M1159.4,530.1 L1151.0,413.5 L1216.9,426.3 Z" fill="#2670BC" fill-opacity="0.115"/><path d="M1159.4,530.1 L1077.6,501.9 L1151.0,413.5 Z" fill="#84C2EC" fill-opacity="0.104"/><path d="M1077.6,501.9 L1081.6,454.5 L1151.0,413.5 Z" fill="#2670BC" fill-opacity="0.077"/><path d="M1077.6,501.9 L978.6,491.1 L1081.6,454.5 Z" fill="#84C2EC" fill-opacity="0.067"/><path d="M978.6,491.1 L973.8,436.0 L1081.6,454.5 Z" fill="#B3DDF5" fill-opacity="0.04"/><path d="M978.6,491.1 L906.7,515.3 L973.8,436.0 Z" fill="#1B57A0" fill-opacity="0.029"/><path d="M6.7,-23.3 L58.0,-13.6 L14.7,79.7 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M58.0,-13.6 L61.2,53.1 L14.7,79.7 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M149.2,8.7 L159.8,62.0 L61.2,53.1 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M225.6,-20.2 L271.8,-23.0 L187.0,50.2 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M271.8,-23.0 L330.9,0.3 L292.3,75.1 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M330.9,0.3 L390.5,-14.8 L359.3,81.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M390.5,-14.8 L415.1,93.2 L359.3,81.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M489.4,2.2 L537.6,4.4 L476.4,72.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M537.6,4.4 L567.0,75.8 L476.4,72.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M159.8,62.0 L117.5,126.9 L55.8,129.7 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M187.0,50.2 L187.4,129.1 L117.5,126.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M187.0,50.2 L292.3,75.1 L187.4,129.1 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M292.3,75.1 L282.1,133.4 L187.4,129.1 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M292.3,75.1 L359.3,81.3 L282.1,133.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M359.3,81.3 L415.1,93.2 L338.2,125.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M567.0,75.8 L535.3,151.2 L489.4,145.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M567.0,75.8 L637.4,73.8 L535.3,151.2 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M637.4,73.8 L603.8,134.1 L535.3,151.2 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M55.8,129.7 L117.5,126.9 L71.6,219.0 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M187.4,129.1 L193.6,187.1 L154.3,223.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M282.1,133.4 L338.2,125.8 L266.7,198.6 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M489.4,145.3 L489.7,204.9 L431.5,200.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M535.3,151.2 L571.1,208.0 L489.7,204.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M23.6,216.9 L71.6,219.0 L3.0,268.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M71.6,219.0 L154.3,223.5 L73.0,299.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M266.7,198.6 L255.8,257.8 L230.7,280.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M571.1,208.0 L608.7,197.6 L575.0,281.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M132.9,266.2 L126.5,356.9 L77.7,351.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M230.7,280.5 L255.8,257.8 L187.9,346.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M255.8,257.8 L325.6,286.2 L273.3,372.2 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M325.6,286.2 L362.6,338.4 L273.3,372.2 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M325.6,286.2 L427.4,276.2 L362.6,338.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M427.4,276.2 L461.2,274.2 L413.4,334.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M461.2,274.2 L502.1,368.2 L413.4,334.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M575.0,281.4 L642.7,297.7 L541.4,356.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M126.5,356.9 L187.9,346.8 L113.7,411.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M362.6,338.4 L335.2,398.3 L293.8,436.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M362.6,338.4 L413.4,334.3 L335.2,398.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M413.4,334.3 L431.6,441.9 L335.2,398.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M413.4,334.3 L502.1,368.2 L431.6,441.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M541.4,356.8 L530.3,432.8 L462.2,419.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M541.4,356.8 L625.3,333.0 L530.3,432.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M293.8,436.3 L261.1,480.8 L208.6,501.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M462.2,419.3 L530.3,432.8 L463.9,476.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M530.3,432.8 L632.8,401.8 L543.3,494.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M632.8,401.8 L607.0,476.3 L543.3,494.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M-1.2,492.4 L57.6,508.2 L-20.7,566.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M57.6,508.2 L55.8,579.9 L-20.7,566.4 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M57.6,508.2 L134.1,475.9 L55.8,579.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M134.1,475.9 L155.1,539.0 L55.8,579.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M134.1,475.9 L208.6,501.3 L155.1,539.0 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M208.6,501.3 L194.0,568.3 L155.1,539.0 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M208.6,501.3 L261.1,480.8 L194.0,568.3 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M261.1,480.8 L368.3,497.3 L261.8,542.0 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M410.3,490.9 L412.0,573.9 L365.4,563.5 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M410.3,490.9 L463.9,476.5 L412.0,573.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M463.9,476.5 L497.1,544.8 L412.0,573.9 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><path d="M543.3,494.3 L531.7,556.6 L497.1,544.8 Z" fill="none" stroke="#EAF3FB" stroke-width="0.6" stroke-opacity="0.35"/><circle cx="274.7" cy="124.0" r="1.12" fill="#E8C468" fill-opacity="0.42"/><circle cx="58.9" cy="452.0" r="1.76" fill="#D4AF37" fill-opacity="0.87"/><circle cx="332.7" cy="261.4" r="1.90" fill="#E8C468" fill-opacity="0.79"/><circle cx="536.1" cy="509.8" r="2.35" fill="#E8C468" fill-opacity="0.43"/><circle cx="449.2" cy="527.0" r="1.41" fill="#D4AF37" fill-opacity="0.61"/><circle cx="273.8" cy="167.0" r="0.81" fill="#E8C468" fill-opacity="0.55"/><circle cx="634.5" cy="50.1" r="1.73" fill="#E8C468" fill-opacity="0.68"/><circle cx="664.2" cy="221.7" r="1.19" fill="#E8C468" fill-opacity="0.76"/><circle cx="300.4" cy="573.4" r="1.12" fill="#E8C468" fill-opacity="0.37"/><circle cx="15.8" cy="293.7" r="2.28" fill="#D4AF37" fill-opacity="0.87"/><circle cx="429.8" cy="88.6" r="1.91" fill="#F1D98A" fill-opacity="0.53"/><circle cx="355.9" cy="124.5" r="2.22" fill="#D4AF37" fill-opacity="0.7"/><circle cx="301.2" cy="338.2" r="2.29" fill="#E8C468" fill-opacity="0.54"/><circle cx="472.6" cy="571.8" r="1.04" fill="#E8C468" fill-opacity="0.68"/><circle cx="277.6" cy="59.8" r="1.06" fill="#E8C468" fill-opacity="0.9"/><circle cx="278.7" cy="573.0" r="2.38" fill="#C9982F" fill-opacity="0.77"/><circle cx="542.6" cy="524.6" r="1.01" fill="#C9982F" fill-opacity="0.45"/><circle cx="49.2" cy="178.4" r="1.85" fill="#D4AF37" fill-opacity="0.54"/><circle cx="256.3" cy="208.8" r="2.26" fill="#F1D98A" fill-opacity="0.58"/><circle cx="252.3" cy="57.5" r="2.38" fill="#C9982F" fill-opacity="0.75"/><circle cx="271.0" cy="275.3" r="1.36" fill="#E8C468" fill-opacity="0.71"/><circle cx="211.2" cy="542.0" r="2.10" fill="#E8C468" fill-opacity="0.77"/><circle cx="483.9" cy="441.2" r="1.49" fill="#F1D98A" fill-opacity="0.76"/><circle cx="54.5" cy="271.4" r="2.53" fill="#C9982F" fill-opacity="0.39"/><circle cx="199.3" cy="424.6" r="1.38" fill="#F1D98A" fill-opacity="0.64"/><circle cx="632.3" cy="159.2" r="2.39" fill="#F1D98A" fill-opacity="0.88"/><circle cx="561.9" cy="98.8" r="1.48" fill="#F1D98A" fill-opacity="0.46"/><circle cx="229.1" cy="122.5" r="0.81" fill="#C9982F" fill-opacity="0.73"/><circle cx="656.0" cy="119.8" r="2.00" fill="#E8C468" fill-opacity="0.78"/><circle cx="177.5" cy="258.4" r="2.15" fill="#E8C468" fill-opacity="0.57"/><circle cx="586.0" cy="407.1" r="0.81" fill="#E8C468" fill-opacity="0.35"/><circle cx="211.2" cy="416.8" r="2.15" fill="#E8C468" fill-opacity="0.63"/><circle cx="547.9" cy="578.5" r="1.28" fill="#F1D98A" fill-opacity="0.61"/><circle cx="361.1" cy="384.3" r="1.94" fill="#C9982F" fill-opacity="0.46"/><circle cx="14.0" cy="65.2" r="1.35" fill="#D4AF37" fill-opacity="0.88"/><circle cx="283.4" cy="228.9" r="1.80" fill="#C9982F" fill-opacity="0.46"/><circle cx="68.1" cy="535.5" r="1.51" fill="#E8C468" fill-opacity="0.5"/><circle cx="223.8" cy="544.3" r="2.42" fill="#F1D98A" fill-opacity="0.58"/><circle cx="648.9" cy="110.9" r="1.25" fill="#C9982F" fill-opacity="0.6"/><circle cx="574.2" cy="433.8" r="1.13" fill="#F1D98A" fill-opacity="0.67"/><circle cx="425.6" cy="567.9" r="2.00" fill="#D4AF37" fill-opacity="0.64"/><circle cx="678.1" cy="324.4" r="1.01" fill="#F1D98A" fill-opacity="0.39"/><circle cx="445.5" cy="2.4" r="2.03" fill="#C9982F" fill-opacity="0.7"/><circle cx="396.4" cy="256.6" r="1.10" fill="#D4AF37" fill-opacity="0.57"/><circle cx="32.5" cy="317.0" r="1.80" fill="#C9982F" fill-opacity="0.44"/><circle cx="298.6" cy="431.2" r="1.55" fill="#E8C468" fill-opacity="0.41"/><circle cx="116.8" cy="170.8" r="1.46" fill="#E8C468" fill-opacity="0.78"/><circle cx="118.1" cy="219.3" r="2.53" fill="#D4AF37" fill-opacity="0.76"/><circle cx="77.2" cy="77.9" r="1.05" fill="#D4AF37" fill-opacity="0.37"/><circle cx="348.7" cy="235.1" r="1.44" fill="#E8C468" fill-opacity="0.69"/><circle cx="517.2" cy="378.9" r="1.41" fill="#D4AF37" fill-opacity="0.84"/><circle cx="550.4" cy="270.4" r="1.35" fill="#D4AF37" fill-opacity="0.43"/><circle cx="437.2" cy="323.2" r="2.47" fill="#E8C468" fill-opacity="0.56"/><circle cx="463.8" cy="60.1" r="2.23" fill="#E8C468" fill-opacity="0.66"/><circle cx="498.4" cy="373.5" r="2.40" fill="#E8C468" fill-opacity="0.83"/><circle cx="570.2" cy="479.9" r="1.47" fill="#C9982F" fill-opacity="0.67"/><circle cx="397.4" cy="12.6" r="2.51" fill="#E8C468" fill-opacity="0.87"/><circle cx="599.1" cy="502.0" r="1.33" fill="#D4AF37" fill-opacity="0.62"/><circle cx="545.1" cy="25.0" r="1.10" fill="#C9982F" fill-opacity="0.82"/><circle cx="451.5" cy="499.4" r="2.54" fill="#F1D98A" fill-opacity="0.8"/><circle cx="415.0" cy="339.7" r="2.05" fill="#D4AF37" fill-opacity="0.77"/><circle cx="638.4" cy="458.1" r="1.55" fill="#E8C468" fill-opacity="0.45"/><circle cx="276.3" cy="33.8" r="1.24" fill="#C9982F" fill-opacity="0.44"/><circle cx="385.7" cy="269.5" r="1.82" fill="#D4AF37" fill-opacity="0.81"/><circle cx="89.6" cy="591.1" r="1.93" fill="#D4AF37" fill-opacity="0.89"/><circle cx="173.1" cy="359.4" r="1.58" fill="#D4AF37" fill-opacity="0.86"/><circle cx="24.2" cy="245.4" r="2.59" fill="#F1D98A" fill-opacity="0.39"/><circle cx="400.0" cy="211.6" r="1.04" fill="#D4AF37" fill-opacity="0.55"/><circle cx="108.7" cy="454.9" r="1.67" fill="#D4AF37" fill-opacity="0.59"/><circle cx="137.1" cy="496.4" r="1.04" fill="#E8C468" fill-opacity="0.44"/><circle cx="466.8" cy="104.1" r="1.73" fill="#D4AF37" fill-opacity="0.48"/><circle cx="356.7" cy="426.0" r="1.56" fill="#D4AF37" fill-opacity="0.48"/><circle cx="220.3" cy="350.0" r="1.69" fill="#D4AF37" fill-opacity="0.79"/><circle cx="20.1" cy="23.7" r="0.91" fill="#E8C468" fill-opacity="0.86"/><circle cx="450.9" cy="114.8" r="2.42" fill="#C9982F" fill-opacity="0.36"/><circle cx="360.6" cy="121.7" r="1.46" fill="#E8C468" fill-opacity="0.54"/><circle cx="96.8" cy="189.1" r="1.27" fill="#F1D98A" fill-opacity="0.38"/><circle cx="651.7" cy="220.1" r="1.05" fill="#D4AF37" fill-opacity="0.81"/><circle cx="258.1" cy="222.5" r="1.37" fill="#F1D98A" fill-opacity="0.48"/><circle cx="104.3" cy="45.9" r="0.85" fill="#E8C468" fill-opacity="0.47"/><circle cx="422.1" cy="471.5" r="0.93" fill="#D4AF37" fill-opacity="0.59"/><circle cx="447.1" cy="50.2" r="2.32" fill="#C9982F" fill-opacity="0.62"/><circle cx="379.7" cy="233.0" r="1.81" fill="#C9982F" fill-opacity="0.53"/><circle cx="234.5" cy="72.3" r="1.76" fill="#D4AF37" fill-opacity="0.86"/><circle cx="149.4" cy="202.2" r="0.98" fill="#C9982F" fill-opacity="0.69"/><circle cx="1167.5" cy="688.1" r="1.51" fill="#D4AF37" fill-opacity="0.68"/><circle cx="1174.3" cy="815.2" r="1.00" fill="#D4AF37" fill-opacity="0.51"/><circle cx="1355.2" cy="862.8" r="1.93" fill="#F1D98A" fill-opacity="0.79"/><circle cx="1351.7" cy="713.7" r="1.18" fill="#D4AF37" fill-opacity="0.85"/><circle cx="1223.4" cy="599.2" r="1.75" fill="#C9982F" fill-opacity="0.6"/><circle cx="1256.4" cy="898.5" r="0.94" fill="#D4AF37" fill-opacity="0.38"/><circle cx="1110.1" cy="569.3" r="1.46" fill="#F1D98A" fill-opacity="0.84"/><circle cx="1316.8" cy="739.9" r="0.83" fill="#C9982F" fill-opacity="0.47"/><circle cx="1320.4" cy="897.5" r="0.82" fill="#F1D98A" fill-opacity="0.81"/><circle cx="1396.4" cy="589.6" r="1.02" fill="#C9982F" fill-opacity="0.9"/><circle cx="1334.0" cy="559.8" r="2.15" fill="#F1D98A" fill-opacity="0.56"/><circle cx="1114.7" cy="622.2" r="1.64" fill="#C9982F" fill-opacity="0.82"/><circle cx="1341.8" cy="806.1" r="1.96" fill="#D4AF37" fill-opacity="0.76"/><circle cx="1378.2" cy="615.3" r="1.43" fill="#C9982F" fill-opacity="0.68"/><circle cx="1158.3" cy="898.8" r="2.03" fill="#C9982F" fill-opacity="0.81"/><circle cx="1170.8" cy="616.1" r="1.09" fill="#C9982F" fill-opacity="0.43"/><circle cx="1198.5" cy="568.9" r="1.60" fill="#C9982F" fill-opacity="0.68"/><circle cx="1105.4" cy="731.2" r="2.05" fill="#D4AF37" fill-opacity="0.54"/><circle cx="1362.7" cy="671.8" r="2.07" fill="#D4AF37" fill-opacity="0.58"/><circle cx="1233.3" cy="560.5" r="0.81" fill="#D4AF37" fill-opacity="0.78"/><circle cx="1187.5" cy="563.5" r="1.97" fill="#C9982F" fill-opacity="0.45"/><circle cx="1279.8" cy="763.6" r="0.94" fill="#D4AF37" fill-opacity="0.53"/><circle cx="1427.7" cy="602.8" r="1.45" fill="#D4AF37" fill-opacity="0.59"/><circle cx="1427.9" cy="702.2" r="1.79" fill="#E8C468" fill-opacity="0.54"/><circle cx="1095.5" cy="643.5" r="2.26" fill="#E8C468" fill-opacity="0.82"/><circle cx="1371.9" cy="758.7" r="1.77" fill="#F1D98A" fill-opacity="0.88"/><circle cx="1297.3" cy="731.8" r="1.97" fill="#C9982F" fill-opacity="0.36"/><circle cx="1298.1" cy="650.7" r="1.01" fill="#D4AF37" fill-opacity="0.39"/><circle cx="1195.0" cy="776.0" r="1.27" fill="#C9982F" fill-opacity="0.45"/><circle cx="1198.4" cy="883.0" r="1.90" fill="#C9982F" fill-opacity="0.37"/><circle cx="1406.9" cy="681.0" r="1.82" fill="#D4AF37" fill-opacity="0.45"/><circle cx="1113.3" cy="668.6" r="2.19" fill="#F1D98A" fill-opacity="0.55"/><circle cx="1311.0" cy="870.4" r="1.21" fill="#E8C468" fill-opacity="0.89"/><circle cx="1206.6" cy="544.0" r="1.89" fill="#D4AF37" fill-opacity="0.55"/><circle cx="1192.8" cy="610.0" r="1.00" fill="#C9982F" fill-opacity="0.9"/><circle cx="1179.4" cy="860.2" r="1.02" fill="#E8C468" fill-opacity="0.51"/><circle cx="1332.6" cy="817.6" r="2.17" fill="#D4AF37" fill-opacity="0.65"/><circle cx="1272.6" cy="574.1" r="1.46" fill="#E8C468" fill-opacity="0.5"/><circle cx="1236.3" cy="665.9" r="2.14" fill="#C9982F" fill-opacity="0.37"/><circle cx="1257.1" cy="701.7" r="0.91" fill="#C9982F" fill-opacity="0.48"/><circle cx="1262.7" cy="534.4" r="1.53" fill="#D4AF37" fill-opacity="0.86"/><circle cx="1282.1" cy="569.0" r="1.83" fill="#C9982F" fill-opacity="0.78"/><circle cx="1272.8" cy="535.3" r="0.82" fill="#E8C468" fill-opacity="0.75"/><circle cx="1415.6" cy="691.4" r="1.83" fill="#F1D98A" fill-opacity="0.62"/><circle cx="1338.6" cy="602.3" r="0.87" fill="#E8C468" fill-opacity="0.44"/><circle cx="1310.5" cy="590.1" r="1.00" fill="#F1D98A" fill-opacity="0.51"/><circle cx="1299.2" cy="812.7" r="1.96" fill="#D4AF37" fill-opacity="0.52"/><circle cx="1305.1" cy="780.9" r="1.71" fill="#C9982F" fill-opacity="0.87"/><circle cx="1259.4" cy="571.7" r="1.72" fill="#E8C468" fill-opacity="0.73"/><circle cx="1091.5" cy="645.3" r="2.12" fill="#E8C468" fill-opacity="0.72"/><circle cx="1424.2" cy="620.3" r="1.62" fill="#F1D98A" fill-opacity="0.81"/><circle cx="1220.1" cy="676.7" r="2.38" fill="#C9982F" fill-opacity="0.61"/><circle cx="1280.4" cy="812.7" r="0.85" fill="#C9982F" fill-opacity="0.48"/><circle cx="1405.5" cy="853.3" r="1.94" fill="#D4AF37" fill-opacity="0.44"/><circle cx="1390.2" cy="633.9" r="1.31" fill="#C9982F" fill-opacity="0.57"/><circle cx="1398.3" cy="662.3" r="1.07" fill="#E8C468" fill-opacity="0.65"/><circle cx="1247.3" cy="799.6" r="1.57" fill="#C9982F" fill-opacity="0.75"/><circle cx="1143.8" cy="735.4" r="1.91" fill="#D4AF37" fill-opacity="0.63"/><circle cx="1279.7" cy="743.2" r="2.07" fill="#F1D98A" fill-opacity="0.47"/><circle cx="1122.4" cy="781.3" r="2.38" fill="#F1D98A" fill-opacity="0.64"/><circle cx="764.2" cy="64.7" r="0.68" fill="#E8C468" fill-opacity="0.89"/><circle cx="979.4" cy="238.4" r="1.06" fill="#E8C468" fill-opacity="0.74"/><circle cx="1079.7" cy="69.0" r="0.70" fill="#D4AF37" fill-opacity="0.75"/><circle cx="643.1" cy="141.2" r="0.86" fill="#C9982F" fill-opacity="0.59"/><circle cx="852.8" cy="286.8" r="1.38" fill="#F1D98A" fill-opacity="0.68"/><circle cx="922.0" cy="95.7" r="1.48" fill="#E8C468" fill-opacity="0.69"/><circle cx="671.7" cy="170.6" r="1.43" fill="#E8C468" fill-opacity="0.88"/><circle cx="1095.7" cy="139.2" r="1.15" fill="#F1D98A" fill-opacity="0.68"/><circle cx="750.0" cy="134.0" r="1.16" fill="#D4AF37" fill-opacity="0.62"/><circle cx="1082.5" cy="270.7" r="1.15" fill="#D4AF37" fill-opacity="0.54"/><circle cx="605.8" cy="130.8" r="1.74" fill="#D4AF37" fill-opacity="0.75"/><circle cx="663.2" cy="235.0" r="1.72" fill="#F1D98A" fill-opacity="0.87"/><circle cx="1065.2" cy="297.3" r="0.60" fill="#E8C468" fill-opacity="0.67"/><circle cx="694.4" cy="286.4" r="1.53" fill="#C9982F" fill-opacity="0.36"/><circle cx="952.6" cy="18.1" r="0.65" fill="#E8C468" fill-opacity="0.37"/><circle cx="709.9" cy="181.0" r="0.85" fill="#D4AF37" fill-opacity="0.45"/><circle cx="732.2" cy="105.7" r="1.04" fill="#C9982F" fill-opacity="0.48"/><circle cx="608.7" cy="135.6" r="0.80" fill="#D4AF37" fill-opacity="0.8"/><circle cx="1068.0" cy="64.0" r="1.65" fill="#C9982F" fill-opacity="0.77"/><circle cx="1018.9" cy="102.0" r="1.45" fill="#F1D98A" fill-opacity="0.53"/><circle cx="750.8" cy="193.4" r="1.38" fill="#D4AF37" fill-opacity="0.61"/><circle cx="727.5" cy="181.5" r="1.00" fill="#D4AF37" fill-opacity="0.87"/><circle cx="955.9" cy="277.1" r="1.43" fill="#D4AF37" fill-opacity="0.45"/><circle cx="779.5" cy="176.9" r="1.41" fill="#C9982F" fill-opacity="0.85"/><circle cx="1047.0" cy="280.5" r="0.92" fill="#E8C468" fill-opacity="0.68"/><circle cx="715.4" cy="92.6" r="1.69" fill="#D4AF37" fill-opacity="0.4"/><circle cx="840.9" cy="236.7" r="1.42" fill="#D4AF37" fill-opacity="0.54"/><circle cx="1031.0" cy="293.1" r="1.63" fill="#D4AF37" fill-opacity="0.81"/><circle cx="876.7" cy="240.9" r="1.08" fill="#D4AF37" fill-opacity="0.83"/><circle cx="757.2" cy="113.1" r="1.20" fill="#E8C468" fill-opacity="0.44"/><circle cx="355.1" cy="835.2" r="1.40" fill="#D4AF37" fill-opacity="0.44"/><circle cx="152.6" cy="706.1" r="0.77" fill="#E8C468" fill-opacity="0.51"/><circle cx="177.0" cy="677.7" r="0.98" fill="#E8C468" fill-opacity="0.38"/><circle cx="126.7" cy="879.9" r="1.59" fill="#D4AF37" fill-opacity="0.79"/><circle cx="88.0" cy="791.1" r="1.42" fill="#C9982F" fill-opacity="0.62"/><circle cx="179.9" cy="898.9" r="1.61" fill="#E8C468" fill-opacity="0.47"/><circle cx="214.1" cy="752.9" r="0.94" fill="#E8C468" fill-opacity="0.6"/><circle cx="113.4" cy="825.8" r="1.22" fill="#E8C468" fill-opacity="0.83"/><circle cx="485.8" cy="835.5" r="0.85" fill="#D4AF37" fill-opacity="0.45"/><circle cx="494.6" cy="681.6" r="1.62" fill="#D4AF37" fill-opacity="0.39"/><circle cx="85.0" cy="674.6" r="0.75" fill="#D4AF37" fill-opacity="0.39"/><circle cx="361.6" cy="876.2" r="1.56" fill="#C9982F" fill-opacity="0.78"/><circle cx="87.1" cy="715.6" r="0.66" fill="#E8C468" fill-opacity="0.61"/><circle cx="256.3" cy="696.2" r="0.69" fill="#E8C468" fill-opacity="0.73"/><circle cx="329.7" cy="692.2" r="0.65" fill="#E8C468" fill-opacity="0.72"/><circle cx="22.3" cy="765.4" r="1.50" fill="#E8C468" fill-opacity="0.69"/><circle cx="55.4" cy="858.0" r="1.10" fill="#E8C468" fill-opacity="0.42"/><circle cx="81.7" cy="841.0" r="1.55" fill="#E8C468" fill-opacity="0.46"/><circle cx="85.6" cy="727.8" r="0.69" fill="#C9982F" fill-opacity="0.39"/><circle cx="121.1" cy="849.9" r="1.52" fill="#D4AF37" fill-opacity="0.72"/><circle cx="220.3" cy="782.5" r="1.34" fill="#C9982F" fill-opacity="0.64"/><circle cx="65.0" cy="831.2" r="1.77" fill="#C9982F" fill-opacity="0.86"/><circle cx="376.0" cy="825.2" r="1.55" fill="#D4AF37" fill-opacity="0.83"/><circle cx="34.2" cy="870.8" r="0.68" fill="#E8C468" fill-opacity="0.84"/><circle cx="316.9" cy="293.1" r="1.02" fill="#C9982F" fill-opacity="0.79"/><circle cx="169.2" cy="104.0" r="0.96" fill="#D4AF37" fill-opacity="0.39"/><circle cx="118.7" cy="285.1" r="0.85" fill="#E8C468" fill-opacity="0.87"/><circle cx="378.1" cy="270.1" r="1.17" fill="#F1D98A" fill-opacity="0.88"/><circle cx="206.0" cy="377.1" r="0.81" fill="#C9982F" fill-opacity="0.5"/><circle cx="366.7" cy="332.1" r="1.33" fill="#F1D98A" fill-opacity="0.73"/><circle cx="75.1" cy="155.8" r="0.86" fill="#E8C468" fill-opacity="0.47"/><circle cx="373.5" cy="420.8" r="1.12" fill="#C9982F" fill-opacity="0.36"/><circle cx="218.7" cy="431.6" r="0.98" fill="#E8C468" fill-opacity="0.69"/><circle cx="163.3" cy="50.5" r="0.99" fill="#E8C468" fill-opacity="0.65"/><circle cx="116.8" cy="463.5" r="1.39" fill="#D4AF37" fill-opacity="0.62"/><circle cx="363.6" cy="243.0" r="1.26" fill="#F1D98A" fill-opacity="0.78"/><circle cx="526.4" cy="415.5" r="1.59" fill="#D4AF37" fill-opacity="0.6"/><circle cx="516.6" cy="334.1" r="0.84" fill="#C9982F" fill-opacity="0.41"/><circle cx="406.5" cy="360.2" r="0.72" fill="#E8C468" fill-opacity="0.76"/><circle cx="423.8" cy="502.1" r="0.81" fill="#E8C468" fill-opacity="0.66"/><circle cx="473.8" cy="173.0" r="0.98" fill="#F1D98A" fill-opacity="0.81"/><circle cx="548.6" cy="403.4" r="0.78" fill="#D4AF37" fill-opacity="0.4"/><circle cx="110.5" cy="244.7" r="1.22" fill="#E8C468" fill-opacity="0.66"/><circle cx="535.2" cy="453.4" r="0.68" fill="#D4AF37" fill-opacity="0.81"/><circle cx="470.9" cy="80.8" r="1.43" fill="#D4AF37" fill-opacity="0.39"/><circle cx="148.2" cy="163.7" r="0.80" fill="#C9982F" fill-opacity="0.67"/><circle cx="538.3" cy="338.3" r="1.33" fill="#F1D98A" fill-opacity="0.42"/><circle cx="138.4" cy="228.5" r="1.08" fill="#C9982F" fill-opacity="0.73"/><circle cx="210.4" cy="347.7" r="0.65" fill="#F1D98A" fill-opacity="0.64"/><circle cx="320.5" cy="247.7" r="1.48" fill="#D4AF37" fill-opacity="0.72"/><circle cx="561.6" cy="247.3" r="1.46" fill="#F1D98A" fill-opacity="0.61"/><circle cx="112.5" cy="42.4" r="1.13" fill="#F1D98A" fill-opacity="0.44"/><circle cx="389.2" cy="175.3" r="1.25" fill="#C9982F" fill-opacity="0.73"/><circle cx="350.9" cy="320.6" r="1.08" fill="#E8C468" fill-opacity="0.58"/><circle cx="1225.4" cy="830.6" r="1.35" fill="#D4AF37" fill-opacity="0.84"/><circle cx="1273.2" cy="610.2" r="0.96" fill="#E8C468" fill-opacity="0.61"/><circle cx="1245.5" cy="764.7" r="0.99" fill="#E8C468" fill-opacity="0.86"/><circle cx="1090.0" cy="836.6" r="1.57" fill="#D4AF37" fill-opacity="0.64"/><circle cx="1406.6" cy="654.3" r="1.42" fill="#F1D98A" fill-opacity="0.37"/><circle cx="1370.8" cy="556.3" r="0.79" fill="#C9982F" fill-opacity="0.86"/><circle cx="1215.6" cy="553.1" r="1.27" fill="#F1D98A" fill-opacity="0.66"/><circle cx="1292.5" cy="682.7" r="0.80" fill="#D4AF37" fill-opacity="0.62"/><circle cx="1135.3" cy="598.9" r="1.38" fill="#C9982F" fill-opacity="0.41"/><circle cx="1260.0" cy="702.7" r="1.31" fill="#E8C468" fill-opacity="0.38"/><circle cx="1270.2" cy="681.3" r="1.41" fill="#C9982F" fill-opacity="0.84"/><circle cx="1339.8" cy="770.4" r="0.62" fill="#C9982F" fill-opacity="0.54"/><circle cx="1371.0" cy="677.6" r="1.17" fill="#C9982F" fill-opacity="0.4"/><circle cx="1259.9" cy="769.4" r="1.32" fill="#D4AF37" fill-opacity="0.72"/><circle cx="1161.6" cy="832.2" r="0.92" fill="#D4AF37" fill-opacity="0.79"/><circle cx="1127.8" cy="724.6" r="0.94" fill="#F1D98A" fill-opacity="0.78"/><circle cx="1401.1" cy="676.5" r="1.49" fill="#C9982F" fill-opacity="0.83"/><circle cx="1356.4" cy="564.2" r="1.18" fill="#E8C468" fill-opacity="0.69"/><circle cx="1130.8" cy="578.9" r="0.64" fill="#C9982F" fill-opacity="0.57"/><circle cx="1197.7" cy="877.3" r="1.49" fill="#E8C468" fill-opacity="0.75"/><circle cx="1168.1" cy="559.4" r="0.70" fill="#D4AF37" fill-opacity="0.69"/><circle cx="1237.3" cy="578.0" r="1.10" fill="#F1D98A" fill-opacity="0.47"/><circle cx="1347.4" cy="834.6" r="0.96" fill="#D4AF37" fill-opacity="0.53"/><circle cx="1263.4" cy="858.2" r="1.03" fill="#E8C468" fill-opacity="0.83"/><circle cx="1431.6" cy="687.0" r="3.98" fill="#F4E3A1" fill-opacity="0.4"/><circle cx="1023.7" cy="527.1" r="4.38" fill="#F4E3A1" fill-opacity="0.53"/><circle cx="1242.4" cy="109.0" r="2.63" fill="#F4E3A1" fill-opacity="0.48"/><circle cx="97.0" cy="205.9" r="3.62" fill="#F4E3A1" fill-opacity="0.46"/><circle cx="1279.2" cy="573.6" r="4.25" fill="#F4E3A1" fill-opacity="0.51"/><circle cx="253.2" cy="448.6" r="3.27" fill="#F4E3A1" fill-opacity="0.54"/><circle cx="646.7" cy="110.4" r="4.50" fill="#F4E3A1" fill-opacity="0.31"/><circle cx="567.3" cy="796.1" r="3.20" fill="#F4E3A1" fill-opacity="0.52"/><circle cx="1297.9" cy="523.1" r="2.74" fill="#F4E3A1" fill-opacity="0.54"/><circle cx="822.8" cy="519.6" r="2.99" fill="#F4E3A1" fill-opacity="0.37"/><circle cx="619.1" cy="154.8" r="2.70" fill="#F4E3A1" fill-opacity="0.31"/><circle cx="1158.4" cy="292.0" r="4.51" fill="#F4E3A1" fill-opacity="0.43"/><circle cx="1022.6" cy="173.4" r="3.05" fill="#F4E3A1" fill-opacity="0.43"/><circle cx="1068.4" cy="522.2" r="4.40" fill="#F4E3A1" fill-opacity="0.37"/><circle cx="1192.1" cy="302.9" r="2.71" fill="#F4E3A1" fill-opacity="0.52"/><circle cx="108.3" cy="610.6" r="2.70" fill="#F4E3A1" fill-opacity="0.55"/></svg></div>
+
+<nav class="site-nav scrolled" id="siteNav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">CH</span>
+      <span class="brand-name">許雅婷 <span>Christine Hsu</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#about">自我介紹</a>
+      <a href="index.html#timeline">工作經歷</a>
+      <a href="index.html#education">學歷</a>
+      <a href="index.html#skills">技能</a>
+      <a href="index.html#autobiography">自傳</a>
+      <a href="index.html" class="nav-cta">← 回首頁</a>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      回到自我介紹首頁
+    </a>
+    <span class="eyebrow">FEATURED PROJECTS</span>
+    <h1 class="sec-title" style="margin-top:14px;">重點專案介紹</h1>
+    <p class="sec-sub" style="max-width:620px;">
+      依時間順序整理五段職涯中的重點專案，包含角色分工、使用技術與印象最深刻的技術亮點。
+      點選下方公司名稱可快速跳轉，或點「查看技術亮點」展開架構說明。
+    </p>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="wrap">
+    <div class="filter-scroll" id="filterScroll">
+      <button class="filter-pill active" data-filter="all">全部</button>
+      <button class="filter-pill" data-filter="apacific">亞太政治哲學文化出版</button>
+      <button class="filter-pill" data-filter="profitable">先得利資訊科技</button>
+      <button class="filter-pill" data-filter="profundity">灼見科技</button>
+      <button class="filter-pill" data-filter="masterlink">元富證券</button>
+      <button class="filter-pill" data-filter="kgi">凱基證券</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     公司區塊資料結構說明（給未來編輯用）：
+     每個 <section class="company-block" data-company="xxx"> 代表一份工作。
+     其中每個 .proj-card 代表一個重點專案，複製整段 .proj-card 即可新增專案，
+     刪除整段 .proj-card 即可移除專案。若專案沒有技術亮點細節，
+     可以直接省略 .detail-toggle 與 .proj-detail 兩個區塊。
+     ============================================================ -->
+
+<!-- ============ 1. 亞太政治哲學文化出版 ============ -->
+<section class="company-block" id="apacific" data-company="apacific">
+  <div class="wrap">
+    <div class="company-head reveal">
+      <div>
+        <span class="company-index">01 / 05</span>
+        <h2 class="company-name">亞太政治哲學文化出版有限公司</h2>
+        <div class="company-role">編輯暨行政助理</div>
+        <div class="company-period">2015.05 — 2016.02（畢業後第一份工作）</div>
+      </div>
+      <p class="company-summary">因熱愛優美、邏輯清晰的文字而投入出版業，是踏入職場的第一站，也埋下日後重視「邏輯化文字」與「使用者溝通」的種子。</p>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">出版編輯與行政庶務</div>
+            <div class="proj-meta"><span>出版流程</span><span>文字編輯</span><span>行政庶務</span></div>
+          </div>
+        </div>
+        <ul class="proj-list">
+          <li>獨立編輯 <span class="mark">3 本以上</span>書籍，聯繫作家與印刷廠，並撰寫 <span class="mark">20 份以上</span>新聞稿與聯絡信件。</li>
+          <li>製作 <span class="mark">60% 以上</span>的活動海報、背板及簡報，並協助舉辦講座、座談會與現場售書開票。</li>
+          <li>管理零用金、請款繳款帳務及銀行電信事務，並負責出進貨倉儲與表單管理，提升 <span class="mark">50%</span> 出貨率。</li>
+          <li>處理日常庶務（寄件、採買、環境維護、貴賓接待），並跨部門協調客戶服務與廠商聯絡等主管交辦事項。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. 先得利資訊科技 ============ -->
+<section class="company-block" id="profitable" data-company="profitable">
+  <div class="wrap">
+    <div class="company-head reveal">
+      <div>
+        <span class="company-index">02 / 05</span>
+        <h2 class="company-name">先得利資訊科技股份有限公司</h2>
+        <div class="company-role">網站維護管理人員（派駐交通部民用航空局）</div>
+        <div class="company-period">2018.12 — 2020.12</div>
+      </div>
+      <p class="company-summary">轉職工程師前的重要一步：派駐政府機關擔任網站系統管理人員，累積系統維運、資安應變與現場客戶溝通的實戰經驗。</p>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">民用航空局官網系統管理與維護</div>
+            <div class="proj-meta"><span>派駐據點</span><span>系統維運</span><span>資安稽核</span></div>
+          </div>
+        </div>
+        <ul class="proj-list">
+          <li>負責交通部民用航空局官網系統管理與維護，涵蓋前後台功能增修、資料庫、主機／VPN 架構與備份防毒。</li>
+          <li>每年執行弱點掃描、滲透測試與資安演練，通過 <span class="mark">ISO27001 資安稽核（連續兩年）</span>，並處理 <span class="mark">9 起以上</span>網路攻擊與異常事件。</li>
+          <li>為公務同仁處理 <span class="mark">70% 以上</span>官網上稿問題，將大眾網站滿意度提升至 <span class="mark">80%</span>。</li>
+          <li>製作系統技術手冊與流量分析報告、舉辦教育訓練，並協助取得無障礙 <span class="mark">AA 標章</span>及其他局內交辦事項。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 灼見科技 ============ -->
+<section class="company-block" id="profundity" data-company="profundity">
+  <div class="wrap">
+    <div class="company-head reveal">
+      <div>
+        <span class="company-index">03 / 05</span>
+        <h2 class="company-name">灼見科技股份有限公司</h2>
+        <div class="company-role">Java 工程師 / 專案經理</div>
+        <div class="company-period">2022.02 — 2022.12</div>
+      </div>
+      <p class="company-summary">正式轉職後端工程師的第一份工作，同時橫跨 PM 與工程師角色，一年內participated 三個風格迥異的專案。</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- 專案 3-1 -->
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">立法院新公報系統</div>
+            <div class="proj-meta"><span>2022.02 – 06</span><span>角色：專案 PM ／後端工程師</span><span>12 人團隊（PM×2 · SA×2 · SD×2 · PG×6）</span></div>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <span>Vue.js</span><span>Java 8</span><span>Spring Boot</span><span>Swagger</span><span>Oracle DB</span><span>Docker</span><span>Hibernate</span><span>GitHub</span><span>Jenkins</span>
+        </div>
+        <ul class="proj-list">
+          <li>提供議案、會議、公報、中央政府總預算等單元的查詢功能（全文查詢、關鍵字查詢、日期查詢、進階查詢）。</li>
+          <li>顯示各單元子項目的標題、時間、標籤、內文與相關附件、影片。</li>
+          <li>開發法案訂閱功能，並透過 GCA 憑證完成資料上傳流程。</li>
+          <li>以 SCRUM 進行每週進度控管，<span class="mark">提前 20% 完成</span>專案預定進度並如期交付。</li>
+          <li>完成 <span class="mark">40%</span> 前後端功能開發，並解決 <span class="mark">80%</span> 系統例外情形。</li>
+        </ul>
+        <button class="detail-toggle" data-detail-toggle>
+          查看技術亮點
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="proj-detail" data-detail-body>
+          <div class="proj-detail-in">
+            <span class="detail-label">印象深刻 1／法案訂閱功能架構</span>
+            <div class="flow">
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 1</span><p>使用者於<strong>法案訂閱介面</strong>輸入欲訂閱的法案名稱、Email 與驗證碼。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 2</span><p><strong>Controller</strong> 接收 HTTP 請求，View 回傳「法案訂閱成功」訊息給使用者。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 3</span><p><strong>Service</strong> 將訂閱資訊（使用者、法案）存入 <strong>Oracle DB</strong>。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 4</span><p>另一組 <strong>Controller</strong> 內含 <code>@Scheduled</code> 排程方法，定期檢查法案是否有更新。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span></div>
+                <div class="flow-content"><span class="num">STEP 5</span><p>法案更新時，<strong>Service</strong> 透過 <strong>JavaMailSender</strong> 寄送通知信，信中顯示法案名稱與更新內容。</p></div></div>
+            </div>
+
+            <div style="margin-top:30px;">
+              <span class="detail-label">印象深刻 2／新舊資料表整併與索引優化</span>
+              <div class="cas-grid">
+                <div class="cas-card"><span class="lbl">CHALLENGE</span><p>新舊資料表繁雜，存在資料重複、索引不足的情形，導致頁面顯示與進階搜尋須串接冗長的 Native SQL，資料庫執行效能不佳。</p></div>
+                <div class="cas-card"><span class="lbl">APPROACH</span><p>與合作公司 PM、SA 及立法院 DBA 共同討論，執行必要的資料表清除、重建，並新增索引。</p></div>
+                <div class="cas-card"><span class="lbl">RESULT</span><p>大幅改善查詢效能與頁面載入速度，降低後續維護的複雜度。</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 專案 3-2 -->
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">GameFi（區塊鏈遊戲）</div>
+            <div class="proj-meta"><span>2022.08 – 12</span><span>角色：專案 PM ／ FAE 工程師</span><span>20 人團隊（PM×2 · SA×2 · SD×2 · PG×14）</span></div>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <span>Java</span><span>C#</span><span>Unity</span><span>Solidity</span><span>Ganache</span><span>Truffle</span><span>BSC</span><span>Redis</span><span>MySQL</span><span>GitHub</span>
+        </div>
+        <ul class="proj-list">
+          <li>開發區塊鏈遊戲（DAPP），玩家可透過抽取卡片角色進行策略佈局，遊戲中使用 NFT 道具與虛擬貨幣。</li>
+          <li>與合作公司確認需求、討論智能合約細節，並協調溝通相關功能問題。</li>
+          <li>回覆 <span class="mark">50%</span> 的技術問題（Java／C#），並協助進行錯誤測試。</li>
+          <li>製作 <span class="mark">80%</span> 的 API 技術說明文件。</li>
+        </ul>
+        <button class="detail-toggle" data-detail-toggle>
+          查看技術亮點
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="proj-detail" data-detail-body>
+          <div class="proj-detail-in">
+            <span class="detail-label">印象深刻／區塊鏈遊戲開發流程</span>
+            <div class="flow">
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 1</span><p>使用 <strong>Solidity</strong> 開發智能合約，涵蓋遊戲邏輯、NFT 道具創建與交易、虛擬貨幣發行（採用 <strong>ERC-721</strong> 建立 NFT、<strong>ERC-20</strong> 發行虛擬貨幣）。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 2</span><p>使用 <strong>Ganache</strong> 建置本機測試網，並以 <strong>Truffle</strong> 框架完成連接與部署設定。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 3</span><p>於 <strong>BSC 測試網</strong>驗證無誤後，正式在主網發布 DAPP。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 4</span><p>前端以 <strong>C# / Unity</strong> 開發遊戲介面，後端以 <strong>Java</strong> 處理遊戲邏輯，並透過 <strong>Web3j / web3.js</strong> 串接交易紀錄與智能合約。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span></div>
+                <div class="flow-content"><span class="num">STEP 5</span><p><strong>MySQL</strong> 儲存玩家資料與遊戲狀態；<strong>Redis</strong> 負責玩家排名與即時訊息推送。</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 專案 3-3 -->
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">海洋研究院氣象資訊應用程式</div>
+            <div class="proj-meta"><span>2022.07 – 08</span><span>角色：個人獨立開發</span></div>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <span>C#</span><span>WinForm</span><span>MySQL</span><span>GitHub</span><span>Jenkins</span>
+        </div>
+        <ul class="proj-list">
+          <li>確認國家海洋研究院的功能需求，並預估開發所需時程。</li>
+          <li>獨立開發能外接氣象資訊的 WinForm 應用程式，並嵌入其他客戶所需使用的網頁。</li>
+          <li>將接收到的氣象資料即時寫入 MySQL 資料庫，供客戶於網頁上實時查看船上氣象資訊。</li>
+        </ul>
+        <button class="detail-toggle" data-detail-toggle>
+          查看技術亮點
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="proj-detail" data-detail-body>
+          <div class="proj-detail-in">
+            <span class="detail-label">印象深刻／使用 Serial Port 與繪製風盤</span>
+            <div class="flow">
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 1</span><p>以 <strong>RS232 傳輸線</strong>連接電腦，接收船上傳來的氣象資訊資料。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 2</span><p>透過 <strong>Serial Port</strong> 傳入、擷取所需的氣象資訊數值。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 3</span><p>撰寫所有會用到的氣象資訊公式（溫度、濕度、風象、風速、經緯度、GPS 位置等客戶指定的處理邏輯）。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span><span class="flow-connector"></span></div>
+                <div class="flow-content"><span class="num">STEP 4</span><p>於 <strong>WinForm 介面</strong>（含風盤與氣象資訊標籤）呈現，並依接收到的新數據即時<strong>繪製風盤</strong>位置。</p></div></div>
+              <div class="flow-step"><div class="flow-rail"><span class="flow-dot"></span></div>
+                <div class="flow-content"><span class="num">STEP 5</span><p>資料同步寫入 <strong>MySQL</strong> 資料庫，供其他客戶網頁即時讀取與顯示。</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 元富證券 ============ -->
+<section class="company-block" id="masterlink" data-company="masterlink">
+  <div class="wrap">
+    <div class="company-head reveal">
+      <div>
+        <span class="company-index">04 / 05</span>
+        <h2 class="company-name">元富證券股份有限公司</h2>
+        <div class="company-role">C# 工程師</div>
+        <div class="company-period">2024.02 — 2024.08</div>
+      </div>
+      <p class="company-summary">短時間內接手並優化證券後台的既有帳務系統，展現快速上手與獨立解決問題的能力。</p>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">利率交換交易帳務系統</div>
+            <div class="proj-meta"><span>2 個月開發週期</span><span>角色：C# 工程師</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>C#</span><span>SQL</span><span>系統維運</span></div>
+        <ul class="proj-list">
+          <li>於 2 個月內開發完成利率交換交易帳務系統的核心功能，並解決 <span class="mark">90%</span> 既有系統問題。</li>
+          <li>優化核心交易處理流程，確保高吞吐量交易處理與資料庫穩定性。</li>
+          <li>製作系統操作文件與測試報告，提供 Tier-2／Tier-3 技術支援。</li>
+          <li>負責程式部署與資料庫還原作業。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 凱基證券 ============ -->
+<section class="company-block" id="kgi" data-company="kgi">
+  <div class="wrap">
+    <div class="company-head reveal">
+      <div>
+        <span class="company-index">05 / 05</span>
+        <h2 class="company-name">凱基證券股份有限公司</h2>
+        <div class="company-role">專員（AI 應用導入、資訊技術諮詢）</div>
+        <div class="company-period">2024.10 — 2026.05</div>
+      </div>
+      <p class="company-summary">最近一份工作，角色從工程師轉向 AI 應用規劃與技術諮詢，橫跨系統開發、競賽、需求訪談與流程優化。</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">收發室內傳系統</div>
+            <div class="proj-meta"><span>8 個月上線</span><span>角色：主導開發</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>Power Apps</span><span>SharePoint</span><span>Power Automate</span></div>
+        <ul class="proj-list">
+          <li>開發收發室內傳系統，撰寫系統教學手冊及測試文件，成功於 8 個月內主導系統上線。</li>
+          <li>持續解決系統問題並優化功能，收穫同仁 <span class="mark">80% 以上</span>的滿意度。</li>
+          <li>現行已推行至全省凱基集團旗下母、子公司使用。</li>
+        </ul>
+      </div>
+
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">2025 凱基 AI 黑客松—健檢需求精準匹配小幫手</div>
+            <div class="proj-meta"><span>銅獎（第三名）</span><span>角色：受指派參賽</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>Microsoft Copilot Studio</span></div>
+        <ul class="proj-list">
+          <li>受主管指派參加 2025 凱基 AI 黑客松競賽，以 Copilot Studio 建構健檢需求精準匹配小幫手。</li>
+          <li>協助公司同仁快速篩選最適合的健檢方案，並靈活回覆相關問題。</li>
+          <li><span class="mark">榮獲銅獎（第三名）</span>，負責技術開發、文件潤飾美化，並製作參賽介紹影片。</li>
+        </ul>
+      </div>
+
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">訪客系統</div>
+            <div class="proj-meta"><span>6 個月上線</span><span>角色：需求主導</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>需求訪談</span><span>系統文件</span></div>
+        <ul class="proj-list">
+          <li>主導訪客系統需求討論及撰寫相關文件。</li>
+          <li>系統於 6 個月內成功上線。</li>
+        </ul>
+      </div>
+
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">庶務請款流程優化</div>
+            <div class="proj-meta"><span>效率提升 70%</span><span>角色：獨立開發</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>Excel VBA</span></div>
+        <ul class="proj-list">
+          <li>以 Excel VBA 優化水、電、瓦斯費用請款庶務流程。</li>
+          <li>提升 <span class="mark">70%</span> 的作業效率，減少人工作業時間。</li>
+        </ul>
+      </div>
+
+      <div class="proj-card reveal" data-proj>
+        <div class="proj-top">
+          <div>
+            <div class="proj-title">IT 支援與部門 AI 推廣</div>
+            <div class="proj-meta"><span>問題解決率 90%</span><span>角色：技術支援 ／ AI 推廣窗口</span></div>
+          </div>
+        </div>
+        <div class="proj-tech"><span>IT 支援</span><span>生成式 AI 教學</span></div>
+        <ul class="proj-list">
+          <li>優化舊有系統，協助同仁解決 <span class="mark">90%</span> 電腦相關問題。</li>
+          <li>於部門會議上以簡報介紹與分享生成式 AI 應用五次以上。</li>
+          <li>管理刻印及鑰匙相關業務。</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="end-cta">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;">THAT'S ALL FOR NOW</span>
+    <h3>想更了解每個專案背後的思考過程？</h3>
+    <p>歡迎在面談中直接提問，我很樂意分享更多細節與當時的取捨。</p>
+    <a href="index.html#about" class="btn btn-primary">回到自我介紹首頁</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name">許雅婷 Christine Hsu</div>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:0955386305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0955-386-305</a>
+        <a href="mailto:rafree1225@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6L12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>rafree1225@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Christine Hsu</span>
+      <span>Interview Portfolio</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const siteNav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => { siteNav.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const rIo = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('in'); rIo.unobserve(entry.target); }
+  });
+}, { threshold: 0.08 });
+revealEls.forEach(el => rIo.observe(el));
+
+// Detail toggle (flow diagrams / challenge-approach-result)
+document.querySelectorAll('[data-detail-toggle]').forEach(btn => {
+  const card = btn.closest('.proj-card');
+  const body = card.querySelector('[data-detail-body]');
+  btn.addEventListener('click', () => {
+    const isOpen = card.classList.toggle('expanded');
+    body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+    btn.childNodes[0].nodeValue = isOpen ? '收合技術亮點 ' : '查看技術亮點 ';
+  });
+});
+
+// Filter pills — scroll to company section
+const pills = document.querySelectorAll('.filter-pill');
+const blocks = document.querySelectorAll('.company-block');
+pills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    pills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const key = pill.getAttribute('data-filter');
+    if (key === 'all') {
+      blocks.forEach(b => b.style.display = '');
+    } else {
+      blocks.forEach(b => b.style.display = (b.getAttribute('data-company') === key) ? '' : 'none');
+      document.getElementById(key).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Deep-link support: index.html#kgi style anchors from the homepage land here via projects.html#kgi
+if (location.hash) {
+  const key = location.hash.replace('#', '');
+  const target = document.getElementById(key);
+  if (target) {
+    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+  }
+}
+</script>
+
+</body>
+</html>
